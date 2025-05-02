@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Валидация полей
     if (!name || !email || !message) {
-      setError('Пожалуйста, заполните все поля.');
-      setSuccess('');
+      setError("Пожалуйста, заполните все поля.");
+      setSuccess("");
       return;
     }
 
     // Очистка ошибок
-    setError('');
+    setError("");
 
     try {
       // Отправка данных на сервер (опционально)
-      const response = await fetch('http://localhost:3000/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("http://localhost:3000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
       });
 
       if (response.ok) {
-        setSuccess('Сообщение успешно отправлено!');
-        setName('');
-        setEmail('');
-        setMessage('');
+        setSuccess("Сообщение успешно отправлено!");
+        setName("");
+        setEmail("");
+        setMessage("");
       } else {
-        setError('Ошибка отправки сообщения. Попробуйте позже.');
+        setError("Ошибка отправки сообщения. Попробуйте позже.");
       }
     } catch (err) {
-      console.error('Ошибка:', err);
-      setError('Ошибка отправки сообщения. Попробуйте позже.');
+      console.error("Ошибка:", err);
+      setError("Ошибка отправки сообщения. Попробуйте позже.");
     }
   };
 

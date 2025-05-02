@@ -1,26 +1,26 @@
-import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import React from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Menu = () => {
   const location = useLocation();
 
   // Генерация хлебных крошек
   const breadcrumbs = location.pathname
-    .split('/')
+    .split("/")
     .filter((path) => path)
     .map((path, index, arr) => {
-      const to = `/${arr.slice(0, index + 1).join('/')}`;
+      const to = `/${arr.slice(0, index + 1).join("/")}`;
       return (
         <span key={to} className="text-gray-400">
           <NavLink
             to={to}
             className={({ isActive }) =>
-              isActive ? 'text-yellow-400' : 'hover:text-yellow-400'
+              isActive ? "text-yellow-400" : "hover:text-yellow-400"
             }
           >
             {path}
           </NavLink>
-          {index < arr.length - 1 && ' / '}
+          {index < arr.length - 1 && " / "}
         </span>
       );
     });
@@ -34,7 +34,7 @@ const Menu = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? 'text-yellow-400' : 'hover:text-yellow-400'
+                isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
             >
               Главная
@@ -44,7 +44,7 @@ const Menu = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive ? 'text-yellow-400' : 'hover:text-yellow-400'
+                isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
             >
               О себе
@@ -54,7 +54,7 @@ const Menu = () => {
             <NavLink
               to="/projects"
               className={({ isActive }) =>
-                isActive ? 'text-yellow-400' : 'hover:text-yellow-400'
+                isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
             >
               Проекты
@@ -64,7 +64,7 @@ const Menu = () => {
             <NavLink
               to="/love"
               className={({ isActive }) =>
-                isActive ? 'text-yellow-400' : 'hover:text-yellow-400'
+                isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
             >
               Саша
@@ -74,7 +74,7 @@ const Menu = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                isActive ? 'text-yellow-400' : 'hover:text-yellow-400'
+                isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
             >
               Контакты
@@ -89,13 +89,13 @@ const Menu = () => {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? 'text-yellow-400' : 'hover:text-yellow-400'
+              isActive ? "text-yellow-400" : "hover:text-yellow-400"
             }
           >
             Главная
           </NavLink>
         </span>
-        {breadcrumbs.length > 0 && ' / '}
+        {breadcrumbs.length > 0 && " / "}
         {breadcrumbs}
       </div>
     </div>

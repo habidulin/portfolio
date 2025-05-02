@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 
 const About = () => {
   return (
     <div className="p-8">
       <h1 className="text-3xl font-bold mb-4">Обо мне</h1>
       <p className="text-lg">
-        Привет! Меня зовут Maksym, и я разработчик с опытом работы в создании современных веб-приложений.
-        Я специализируюсь на React, Tailwind CSS и других современных технологиях.
+        Привет! Меня зовут Maksym, и я разработчик с опытом работы в создании
+        современных веб-приложений. Я специализируюсь на React, Tailwind CSS и
+        других современных технологиях.
       </p>
       <p className="text-lg mt-4">
         В этом портфолио вы найдёте мои проекты, навыки и контактную информацию.
@@ -25,11 +26,11 @@ const About = () => {
 
       {/* Секция с изображением (опционально) */}
       <div className="mt-8">
-      <img
-        src="/assets/images/avatar.jpeg"
-        alt="Maksym"
-        className="w-32 h-32 rounded-full mx-auto"
-      />
+        <img
+          src="/assets/images/avatar.jpeg"
+          alt="Maksym"
+          className="w-32 h-32 rounded-full mx-auto"
+        />
         <p className="text-center text-sm mt-4 text-gray-500">
           Это я! Спасибо, что посетили мой сайт.
         </p>
