@@ -23,7 +23,7 @@ const Love = () => {
 
       {/* Изображение */}
       <img
-        src={`${process.env.PUBLIC_URL}/assets/images/love.jpg`}
+        src="/assets/images/love.jpg"
         alt="Александра"
         className="w-64 h-64 rounded-full mx-auto mt-8 shadow-lg"
       />

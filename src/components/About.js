@@ -14,7 +14,7 @@ const About = () => {
       </p>
 
       {/* Секция навыков */}
-      <h2 className="text-2xl font-bold mt-8 mb-4">Мои навыки</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Мои навыки и больше</h2>
       <ul className="list-disc list-inside text-lg">
         <li>React</li>
         <li>Tailwind CSS</li>
@@ -26,7 +26,7 @@ const About = () => {
       {/* Секция с изображением (опционально) */}
       <div className="mt-8">
       <img
-        src={`${process.env.PUBLIC_URL}/assets/images/avatar.jpeg`}
+        src="/assets/images/avatar.jpeg"
         alt="Maksym"
         className="w-32 h-32 rounded-full mx-auto"
       />
