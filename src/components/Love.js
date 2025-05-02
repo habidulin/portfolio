@@ -1,12 +1,11 @@
 import React from 'react';
-import loveImage from '../assets/images/love.jpg';
 
 const Love = () => {
   return (
     <div className="p-8 text-center">
 
       {/* Заголовок */}
-      <h1 className="text-4xl font-bold mb-4 text-red-500">Александра, я тебя люблю!</h1>
+      <h1 className="text-4xl font-bold mb-4 text-red-500">Саша, я тебя люблю!</h1>
 
       {/* Текст */}
       <p className="text-lg mt-4">
@@ -24,7 +23,7 @@ const Love = () => {
 
       {/* Изображение */}
       <img
-        src={loveImage}
+        src={`${process.env.PUBLIC_URL}/assets/images/love.jpg`}
         alt="Александра"
         className="w-64 h-64 rounded-full mx-auto mt-8 shadow-lg"
       />

@@ -25,11 +25,11 @@ const About = () => {
 
       {/* Секция с изображением (опционально) */}
       <div className="mt-8">
-        <img
-          src={require('../assets/images/avatar.jpeg')}
-          alt="Maksym"
-          className="w-32 h-32 rounded-full mx-auto"
-        />
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/images/avatar.jpeg`}
+        alt="Maksym"
+        className="w-32 h-32 rounded-full mx-auto"
+      />
         <p className="text-center text-sm mt-4 text-gray-500">
           Это я! Спасибо, что посетили мой сайт.
         </p>
