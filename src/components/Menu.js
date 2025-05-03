@@ -28,28 +28,34 @@ const Menu = () => {
 
   return (
     <div>
-      {/* Навигационное меню */}
-      <nav className="bg-gray-800 text-white p-4">
-        {/* Кнопка-гамбургер для мобильных устройств */}
-        <button
-          className="block md:hidden text-yellow-400"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          ☰
-        </button>
+      {/* Кнопка-гамбургер */}
+      <button
+        className="fixed top-4 left-4 z-50 text-yellow-400 md:hidden"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        ☰
+      </button>
 
-        {/* Список ссылок */}
-        <ul
-          className={`${
-            isOpen ? "block" : "hidden"
-          } md:flex space-x-4 mt-4 md:mt-0`}
+      {/* Боковое меню */}
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-gray-800 bg-opacity-90 text-white p-4 transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out z-40`}
+      >
+        <button
+          className="text-yellow-400 mb-4"
+          onClick={() => setIsOpen(false)}
         >
+          ✕ Закрыть
+        </button>
+        <ul className="space-y-4">
           <li>
             <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
+              onClick={() => setIsOpen(false)}
             >
               Главная
             </NavLink>
@@ -60,6 +66,7 @@ const Menu = () => {
               className={({ isActive }) =>
                 isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
+              onClick={() => setIsOpen(false)}
             >
               О себе
             </NavLink>
@@ -70,6 +77,7 @@ const Menu = () => {
               className={({ isActive }) =>
                 isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
+              onClick={() => setIsOpen(false)}
             >
               Проекты
             </NavLink>
@@ -80,6 +88,7 @@ const Menu = () => {
               className={({ isActive }) =>
                 isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
+              onClick={() => setIsOpen(false)}
             >
               Саша
             </NavLink>
@@ -90,12 +99,13 @@ const Menu = () => {
               className={({ isActive }) =>
                 isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
+              onClick={() => setIsOpen(false)}
             >
               Контакты
             </NavLink>
           </li>
         </ul>
-      </nav>
+      </div>
 
       {/* Хлебные крошки */}
       <div className="bg-gray-100 p-4 text-sm">
