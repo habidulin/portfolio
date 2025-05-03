@@ -30,7 +30,7 @@ const Menu = () => {
     <div>
       {/* Кнопка-гамбургер */}
       <button
-        className="fixed top-4 left-4 z-50 text-yellow-400 md:hidden"
+        className="fixed top-4 right-4 z-50 text-yellow-400 text-3xl md:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
         ☰
