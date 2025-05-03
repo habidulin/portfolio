@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 const Menu = () => {
+  const [isOpen, setIsOpen] = useState(false); // Состояние для управления меню
   const location = useLocation();
 
   // Генерация хлебных крошек
@@ -29,7 +30,20 @@ const Menu = () => {
     <div>
       {/* Навигационное меню */}
       <nav className="bg-gray-800 text-white p-4">
-        <ul className="flex space-x-4">
+        {/* Кнопка-гамбургер для мобильных устройств */}
+        <button
+          className="block md:hidden text-yellow-400"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
+
+        {/* Список ссылок */}
+        <ul
+          className={`${
+            isOpen ? "block" : "hidden"
+          } md:flex space-x-4 mt-4 md:mt-0`}
+        >
           <li>
             <NavLink
               to="/"
