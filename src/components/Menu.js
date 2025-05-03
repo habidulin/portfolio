@@ -1,46 +1,22 @@
 import React, { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import HamburgerButton from "./HamburgerButton";
+import HorizontalMenu from "./HorizontalMenu";
+import Breadcrumbs from "./Breadcrumbs";
+import { NavLink } from "react-router-dom";
 
 const Menu = () => {
-  const [isOpen, setIsOpen] = useState(false); // Состояние для управления меню
-  const location = useLocation();
-
-  // Генерация хлебных крошек
-  const breadcrumbs = location.pathname
-    .split("/")
-    .filter((path) => path)
-    .map((path, index, arr) => {
-      const to = `/${arr.slice(0, index + 1).join("/")}`;
-      return (
-        <span key={to} className="text-gray-400">
-          <NavLink
-            to={to}
-            className={({ isActive }) =>
-              isActive ? "text-yellow-400" : "hover:text-yellow-400"
-            }
-          >
-            {path}
-          </NavLink>
-          {index < arr.length - 1 && " / "}
-        </span>
-      );
-    });
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
       {/* Кнопка-гамбургер */}
-      <button
-        className="fixed top-4 right-4 z-50 text-yellow-400 text-3xl md:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        ☰
-      </button>
+      <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
 
       {/* Боковое меню */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-gray-800 bg-opacity-90 text-white p-4 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out z-40`}
+        } transition-transform duration-300 ease-in-out z-40 md:hidden`}
       >
         <button
           className="text-yellow-400 mb-4"
@@ -107,21 +83,11 @@ const Menu = () => {
         </ul>
       </div>
 
+      {/* Горизонтальное меню */}
+      <HorizontalMenu />
+
       {/* Хлебные крошки */}
-      <div className="bg-gray-100 p-4 text-sm">
-        <span className="text-gray-400">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? "text-yellow-400" : "hover:text-yellow-400"
-            }
-          >
-            Главная
-          </NavLink>
-        </span>
-        {breadcrumbs.length > 0 && " / "}
-        {breadcrumbs}
-      </div>
+      <Breadcrumbs />
     </div>
   );
 };
