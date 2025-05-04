@@ -9,9 +9,6 @@ const Menu = () => {
 
   return (
     <div>
-      {/* Кнопка-гамбургер */}
-      <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
-
       {/* Боковое меню */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-gray-800 bg-opacity-90 text-white p-4 transform ${
@@ -19,18 +16,18 @@ const Menu = () => {
         } transition-transform duration-300 ease-in-out z-40 md:hidden`}
       >
         <button
-          className="text-yellow-400 mb-4"
+          className="absolute top-4 right-4 text-yellow-400 text-3xl"
           onClick={() => setIsOpen(false)}
         >
-          ✕ Закрыть
+          ✕
         </button>
-        <ul className="space-y-4">
+        <ul className="space-y-4 mt-16 flex flex-col items-center">
           <li>
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-yellow-400" : "hover:text-yellow-400"
-              }
+                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+            }
               onClick={() => setIsOpen(false)}
             >
               Главная
@@ -40,8 +37,8 @@ const Menu = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive ? "text-yellow-400" : "hover:text-yellow-400"
-              }
+                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+            }
               onClick={() => setIsOpen(false)}
             >
               О себе
@@ -51,8 +48,8 @@ const Menu = () => {
             <NavLink
               to="/projects"
               className={({ isActive }) =>
-                isActive ? "text-yellow-400" : "hover:text-yellow-400"
-              }
+                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+            }
               onClick={() => setIsOpen(false)}
             >
               Проекты
@@ -62,8 +59,8 @@ const Menu = () => {
             <NavLink
               to="/love"
               className={({ isActive }) =>
-                isActive ? "text-yellow-400" : "hover:text-yellow-400"
-              }
+                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+            }
               onClick={() => setIsOpen(false)}
             >
               Саша
@@ -73,8 +70,8 @@ const Menu = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                isActive ? "text-yellow-400" : "hover:text-yellow-400"
-              }
+                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+            }
               onClick={() => setIsOpen(false)}
             >
               Контакты
@@ -88,6 +85,9 @@ const Menu = () => {
 
       {/* Хлебные крошки */}
       <Breadcrumbs />
+
+      {/* Кнопка-гамбургер */}
+      <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 };

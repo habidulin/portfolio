@@ -3,14 +3,14 @@ import { NavLink } from "react-router-dom";
 
 const HorizontalMenu = () => {
   return (
-    <nav className="hidden md:flex justify-center space-x-4 bg-gray-800 text-white p-4">
+    <nav className="hidden md:flex justify-center items-center space-x-8 bg-gray-800 text-white p-1">
       <NavLink
         to="/"
         className={({ isActive }) =>
           isActive ? "text-yellow-400" : "hover:text-yellow-400"
         }
       >
-        Главная
+        <img src="/logo512.png" alt="Главная" className="w-12 h-12" />
       </NavLink>
       <NavLink
         to="/about"

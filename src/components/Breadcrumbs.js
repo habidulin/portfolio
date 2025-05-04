@@ -1,4 +1,4 @@
-import React from "react";
+import React, { } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 const Breadcrumbs = () => {
@@ -25,20 +25,19 @@ const Breadcrumbs = () => {
     });
 
   return (
-    <div className="bg-gray-100 p-4 text-sm flex justify-between">
-      <span className="text-gray-400 flex-grow text-left">
+    <div className="bg-gray-100 bg-opacity-80 p-1 text-sm flex justify-between items-center h-14 md:relative top-0 left-0 w-full relative">
+      <span className="text-gray-400 flex-grow text-left flex items-center space-x-2">
         <NavLink
           to="/"
           className={({ isActive }) =>
             isActive ? "text-yellow-400" : "hover:text-yellow-400"
           }
         >
-          Главная
+          <img src="/logo512.png" alt="Главная" className="w-6 h-6" />
         </NavLink>
-        {breadcrumbs.length > 0 && " / "}
+        {breadcrumbs.length > 0 && <span className="mx-2">&gt;</span>}
         {breadcrumbs}
       </span>
-      <button className="text-yellow-400 text-3xl md:hidden">☰</button>
     </div>
   );
 };
