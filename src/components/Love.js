@@ -2,7 +2,7 @@ import React from "react";
 
 const Love = () => {
   return (
-    <div className="p-8 text-center">
+    <div className="p-4 text-center">
       {/* Заголовок */}
       <h1 className="text-4xl font-bold mb-4 text-red-500">
         Саша, я тебя люблю!

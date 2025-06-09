@@ -43,7 +43,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="p-8">
+    <div className="p-4">
       <h2 className="text-3xl font-bold mb-4">Связаться со мной</h2>
       <form onSubmit={handleSubmit}>
         {error && <p className="text-red-500 mb-4">{error}</p>}

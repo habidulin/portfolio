@@ -13,6 +13,14 @@ const HorizontalMenu = () => {
         <img src="/logo512.png" alt="Главная" className="w-12 h-12" />
       </NavLink>
       <NavLink
+        to="/skills"
+        className={({ isActive }) =>
+          isActive ? "text-yellow-400" : "hover:text-yellow-400"
+        }
+      >
+        Навыки
+      </NavLink>
+      <NavLink
         to="/about"
         className={({ isActive }) =>
           isActive ? "text-yellow-400" : "hover:text-yellow-400"
