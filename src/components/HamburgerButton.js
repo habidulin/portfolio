@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"; // Импорт PropTypes
 
 const HamburgerButton = ({ isOpen, setIsOpen }) => {
   return (
@@ -9,6 +10,11 @@ const HamburgerButton = ({ isOpen, setIsOpen }) => {
       ☰
     </button>
   );
+};
+
+HamburgerButton.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
 };
 
 export default HamburgerButton;

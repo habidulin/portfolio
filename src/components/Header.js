@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types"; // Импорт PropTypes
 
 const Header = ({ name = "Maksym" }) => {
   return (
@@ -41,6 +42,11 @@ const Header = ({ name = "Maksym" }) => {
       </nav>
     </header>
   );
+};
+
+// Добавление PropTypes для проверки типа пропса name
+Header.propTypes = {
+  name: PropTypes.string.isRequired,
 };
 
 export default Header;

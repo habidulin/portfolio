@@ -2,8 +2,8 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Menu from "./components/Menu";
 import Home from "./components/Home";
-import Skills from "./components/Skills";
 import About from "./components/About";
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 import Love from "./components/Love"; // Импорт компонента Love
@@ -14,8 +14,8 @@ const App = () => {
       <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/skills" element={<Skills />} />
         <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/love" element={<Love />} />
         <Route path="/contact" element={<ContactForm />} />

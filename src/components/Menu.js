@@ -21,63 +21,74 @@ const Menu = () => {
         >
           ✕
         </button>
-        <ul className="space-y-4 mt-16 flex flex-col items-center">
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
-            }
-              onClick={() => setIsOpen(false)}
-            >
-              Главная
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
-            }
-              onClick={() => setIsOpen(false)}
-            >
-              О себе
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) =>
-                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
-            }
-              onClick={() => setIsOpen(false)}
-            >
-              Проекты
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/love"
-              className={({ isActive }) =>
-                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
-            }
-              onClick={() => setIsOpen(false)}
-            >
-              Саша
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
-            }
-              onClick={() => setIsOpen(false)}
-            >
-              Контакты
-            </NavLink>
-          </li>
-        </ul>
+          <ul className="space-y-4 mt-16 flex flex-col items-center">
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+              }
+                onClick={() => setIsOpen(false)}
+              >
+                Главная
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/skills"
+                className={({ isActive }) =>
+                  isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+              }
+                onClick={() => setIsOpen(false)}
+              >
+                Навыки
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+              }
+                onClick={() => setIsOpen(false)}
+              >
+                О себе
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/projects"
+                className={({ isActive }) =>
+                  isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+              }
+                onClick={() => setIsOpen(false)}
+              >
+                Проекты
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/love"
+                className={({ isActive }) =>
+                  isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+              }
+                onClick={() => setIsOpen(false)}
+              >
+                Саша
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+              }
+                onClick={() => setIsOpen(false)}
+              >
+                Контакты
+              </NavLink>
+            </li>
+          </ul>
       </div>
 
       {/* Горизонтальное меню */}
