@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="p-8">
+    <div className="p-4">
       <h1 className="text-3xl font-bold mb-4">Обо мне</h1>
       <p className="text-lg">
         Привет! Меня зовут Maksym, и я разработчик с опытом работы в создании
