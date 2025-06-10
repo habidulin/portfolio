@@ -19,7 +19,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "warn", // Предупреждение для отсутствующих PropTypes
     "no-unused-vars": "warn", // Предупреждение для неиспользуемых переменных
-    "no-console": "warn", // Предупреждение для использования console.log
+    "no-console": "off", // Предупреждение для использования console.log
     "eqeqeq": "error", // Требовать строгое сравнение (=== вместо ==)
   },
   settings: {
