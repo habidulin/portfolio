@@ -16,7 +16,7 @@ const Menu = () => {
         } transition-transform duration-300 ease-in-out z-40 md:hidden`}
       >
         <button
-          className="absolute top-4 right-4 text-yellow-400 text-4xl"
+          className="absolute top-4 right-4 text-yellow-400 text-5xl"
           onClick={() => setIsOpen(false)}
         >
           ✕
