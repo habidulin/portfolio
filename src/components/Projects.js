@@ -1,26 +1,16 @@
 import React, { useState } from "react";
 
-const images = [
-  {
-    src: "/assets/images/love.jpg",
-    alt: "Александра",
-  },
-  {
-    src: "/assets/images/love2.jpg",
-    alt: "Маленькая 1",
-  },
-  {
-    src: "/assets/images/love3.jpg",
-    alt: "Маленькая 2",
-  },
-];
-
 const projects = [
   {
     id: 1,
-    title: "🌐 Portfolio Website",
-    description: "Личный сайт-портфолио на React и Tailwind CSS. Адаптивная верстка, разделы: проекты, контакты, блог.",
+    title: "Engel&Völkers 2023-2025 🗓",
+    description: "Внедрил комплексную систему координации, которая способствует организации информации, сотрудничеству и стратегическому планированию в маркетинговой команде.",
     link: "#",
+    images: [
+      { src: "../assets/images/ev1.jpg", alt: "EV 1" },
+      { src: "../assets/images/ev2.jpg", alt: "EV 2" },
+      { src: "../assets/images/ev3.jpg", alt: "EV 3" },
+    ],
   },
   {
     id: 2,
@@ -41,11 +31,16 @@ const Projects = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [current, setCurrent] = useState(0);
 
+  // Для хранения картинок текущего проекта
+  const [modalImages, setModalImages] = useState([]);
+
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const openModal = (idx) => {
+  // Открыть модалку с нужным массивом картинок
+  const openModal = (imagesArr, idx) => {
+    setModalImages(imagesArr);
     setCurrent(idx);
     setModalOpen(true);
   };
@@ -54,12 +49,12 @@ const Projects = () => {
 
   const prevImage = (e) => {
     e.stopPropagation();
-    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setCurrent((prev) => (prev === 0 ? modalImages.length - 1 : prev - 1));
   };
 
   const nextImage = (e) => {
     e.stopPropagation();
-    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setCurrent((prev) => (prev === modalImages.length - 1 ? 0 : prev + 1));
   };
 
   return (
@@ -80,30 +75,29 @@ const Projects = () => {
             </button>
             {activeIndex === index && (
               <div className="p-4 text-gray-700 space-y-4">
-                {/* Название проекта (можно убрать, если не нужно дублировать) */}
-                {/* <div className="text-lg font-bold">{project.title}</div> */}
-                {/* Сетка с картинками */}
-                <div className="grid grid-cols-3 grid-rows-2 gap-2 items-center">
-                  <img
-                    src={images[0].src}
-                    alt={images[0].alt}
-                    className="row-span-2 col-span-2 w-full h-40 object-cover rounded-xl shadow-lg cursor-pointer"
-                    onClick={() => openModal(0)}
-                  />
-                  <img
-                    src={images[1].src}
-                    alt={images[1].alt}
-                    className="w-full h-20 object-cover rounded-xl shadow cursor-pointer"
-                    onClick={() => openModal(1)}
-                  />
-                  <img
-                    src={images[2].src}
-                    alt={images[2].alt}
-                    className="w-full h-20 object-cover rounded-xl shadow cursor-pointer"
-                    onClick={() => openModal(2)}
-                  />
-                </div>
-                {/* Описание и ссылка */}
+                {/* Только для Engel&Völkers показываем картинки */}
+                {project.images && (
+                  <div className="grid grid-cols-3 grid-rows-2 gap-2 items-center">
+                    <img
+                      src={project.images[0].src}
+                      alt={project.images[0].alt}
+                      className="row-span-2 col-span-2 w-full h-40 object-cover rounded-xl shadow-lg cursor-pointer"
+                      onClick={() => openModal(project.images, 0)}
+                    />
+                    <img
+                      src={project.images[1].src}
+                      alt={project.images[1].alt}
+                      className="w-full h-20 object-cover rounded-xl shadow cursor-pointer"
+                      onClick={() => openModal(project.images, 1)}
+                    />
+                    <img
+                      src={project.images[2].src}
+                      alt={project.images[2].alt}
+                      className="w-full h-20 object-cover rounded-xl shadow cursor-pointer"
+                      onClick={() => openModal(project.images, 2)}
+                    />
+                  </div>
+                )}
                 <p>{project.description}</p>
                 <a
                   href={project.link}
@@ -142,8 +136,8 @@ const Projects = () => {
             &#8592;
           </button>
           <img
-            src={images[current].src}
-            alt={images[current].alt}
+            src={modalImages[current]?.src}
+            alt={modalImages[current]?.alt}
             className="max-h-[80vh] max-w-[90vw] rounded-xl shadow-lg"
             onClick={(e) => e.stopPropagation()}
           />
