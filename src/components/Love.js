@@ -37,7 +37,7 @@ const Love = () => {
   };
 
   return (
-    <div className="p-4 text-center">
+    <div className="text-center">
       <h1 className="text-2xl font-bold mb-4 text-red-500">
         Саша, я тебя люблю!
       </h1>
@@ -47,7 +47,7 @@ const Love = () => {
       </p>
 
       {/* Сетка с одной большой и двумя маленькими картинками */}
-      <div className="grid grid-cols-3 grid-rows-2 gap-2 mx-auto mt-6 items-center max-w-xs">
+      <div className="grid grid-cols-3 grid-rows-2 gap-2 mt-6 items-center">
         <img
           src={images[0].src}
           alt={images[0].alt}
