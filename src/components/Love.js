@@ -37,7 +37,7 @@ const Love = () => {
   };
 
   return (
-    <div className="text-center">
+    <div className="p-4 text-center">
       <h1 className="text-2xl font-bold mb-4 text-red-500">
         Саша, я тебя люблю!
       </h1>
