@@ -76,7 +76,7 @@ const Love = () => {
         >
           {/* Крестик закрытия */}
           <button
-            className="absolute top-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-2xl rounded-full p-2 shadow-lg border-2 border-gray-300 transition"
+            className="absolute top-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-2xl rounded-full w-9 h-9 flex items-center justify-center shadow-lg border-2 border-gray-300 transition"
             onClick={closeModal}
             aria-label="Закрыть"
           >
@@ -84,7 +84,7 @@ const Love = () => {
           </button>
           {/* Стрелка влево */}
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-3xl rounded-full p-2 shadow-lg border-2 border-gray-300 transition"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-3xl rounded-full w-9 h-9 flex items-center justify-center shadow-lg border-2 border-gray-300 transition"
             onClick={prevImage}
             aria-label="Предыдущая"
           >
@@ -98,7 +98,7 @@ const Love = () => {
           />
           {/* Стрелка вправо */}
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-3xl rounded-full p-2 shadow-lg border-2 border-gray-300 transition"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-3xl rounded-full w-9 h-9 flex items-center justify-center shadow-lg border-2 border-gray-300 transition"
             onClick={nextImage}
             aria-label="Следующая"
           >
