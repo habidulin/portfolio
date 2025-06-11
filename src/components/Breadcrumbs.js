@@ -25,7 +25,7 @@ const Breadcrumbs = () => {
     });
 
   return (
-    <div className="bg-gray-100 bg-opacity-80 p-1 text-sm flex justify-between items-center h-14 md:relative top-0 left-0 w-full relative">
+    <div className="bg-gray-100 bg-opacity-80 p-1 text-base flex justify-between items-center h-14 md:relative top-0 left-0 w-full relative">
       <span className="text-gray-400 flex-grow text-left flex items-center space-x-2">
         <NavLink
           to="/"

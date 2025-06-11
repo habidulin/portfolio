@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6 {
   @apply text-xl font-bold;
 }
 p, span, li {
-  @apply text-sm;
+  @apply text-base;
 }
 button {
   @apply text-lg;

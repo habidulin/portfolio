@@ -6,8 +6,8 @@ const Love = () => {
       <h1 className="text-2xl font-bold mb-4 text-red-500">
         Саша, я тебя люблю!
       </h1>
-      <p className="text-sm mt-4">Ты — самое важное, что есть в моей жизни.</p>
-      <p className="text-sm mt-4">
+      <p className="text-base mt-4">Ты — самое важное, что есть в моей жизни.</p>
+      <p className="text-base mt-4">
         Спасибо за твою поддержку, улыбку и любовь.
       </p>
 
@@ -33,10 +33,10 @@ const Love = () => {
         />
       </div>
 
-      <p className="text-sm mt-4">
+      <p className="text-base mt-4">
         Этот сайт — не только о моих проектах, но и о том, как сильно я ценю тебя.
       </p>
-      <p className="text-sm mt-4">
+      <p className="text-base mt-4">
         Ты вдохновляешь меня каждый день становиться лучше. Я счастлив, что ты рядом.
       </p>
 
