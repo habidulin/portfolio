@@ -68,7 +68,7 @@ const SkillsAccordion = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4">Мои навыки</h1>
+      <h1 className="text-2xl font-bold mb-4">Мои навыки</h1>
       <div className="space-y-4">
         {skills.map((skill, index) => (
           <div
