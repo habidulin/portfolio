@@ -1,3 +1,4 @@
+import { projects } from "./components/Projects";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Menu from "./components/Menu";
@@ -7,6 +8,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 import Love from "./components/Love"; // Импорт компонента Love
+import ProjectDetails from "./components/ProjectDetails";
 
 const App = () => {
   return (
@@ -19,6 +21,7 @@ const App = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/love" element={<Love />} />
         <Route path="/contact" element={<ContactForm />} />
+        <Route path="/projects/:id" element={<ProjectDetails projects={projects} />} />
       </Routes>
     </>
   );

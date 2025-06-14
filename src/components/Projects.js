@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-const projects = [
+export const projects = [
   {
     id: 1,
     title: "Engel&Völkers 2023-2025 🗓",
@@ -36,7 +37,7 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+  const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [current, setCurrent] = useState(0);
@@ -118,14 +119,12 @@ const Projects = () => {
                   </div>
                 )}
                 <p>{project.description}</p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link                  
+                  to={`/projects/${project.id}`}
                   className="text-blue-500 underline"
                 >
                   👉 Перейти к проекту
-                </a>
+                </Link>
               </div>
             )}
           </div>
