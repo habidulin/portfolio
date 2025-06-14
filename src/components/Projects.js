@@ -17,12 +17,22 @@ const projects = [
     title: "🛒 Online Store",
     description: "Интернет-магазин с корзиной, оплатой и панелью администратора. Стек: React, Node.js, MongoDB.",
     link: "#",
+       images: [
+      { src: "../assets/images/ev1.jpg", alt: "EV 1" },
+      { src: "../assets/images/ev2.jpg", alt: "EV 2" },
+      { src: "../assets/images/ev3.jpg", alt: "EV 3" },
+    ],
   },
   {
     id: 3,
     title: "📱 Mobile App",
     description: "Мобильное приложение для заметок с синхронизацией и push-уведомлениями. Реализовано на React Native.",
     link: "#",
+       images: [
+      { src: "../assets/images/ev1.jpg", alt: "EV 1" },
+      { src: "../assets/images/ev2.jpg", alt: "EV 2" },
+      { src: "../assets/images/ev3.jpg", alt: "EV 3" },
+    ],
   },
 ];
 
@@ -67,14 +77,23 @@ const Projects = () => {
             className="border border-gray-300 rounded-lg shadow-md"
           >
             <button
-              className="w-full text-left p-4 text-lg font-bold flex justify-between items-center"
+              className="w-full text-left p-2 md:p-4 text-lg font-bold flex justify-between items-center"
               onClick={() => toggleAccordion(index)}
             >
-              {project.title}
-              <span>{activeIndex === index ? "−" : "+"}</span>
+              <span className="flex-1">{project.title}</span>
+              <span
+                className={
+                  activeIndex === index
+                    ? "text-red-600 text-2xl font-bold ml-2 select-none flex items-center leading-none relative -top-0.5"
+                    : "text-blue-600 text-2xl font-bold ml-2 cursor-pointer select-none flex items-center leading-none relative -top-0.5"
+                }
+                style={{ lineHeight: 1 }}
+              >
+                {activeIndex === index ? "×" : "+"}
+              </span>
             </button>
             {activeIndex === index && (
-              <div className="p-4 text-gray-700 space-y-4">
+              <div className="p-2 md:p-4 text-gray-700 space-y-4">
                 {/* Только для Engel&Völkers показываем картинки */}
                 {project.images && (
                   <div className="grid grid-cols-3 grid-rows-2 gap-2 items-center">

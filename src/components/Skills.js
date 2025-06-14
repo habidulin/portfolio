@@ -67,6 +67,7 @@ const SkillsAccordion = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Мои навыки</h1>
@@ -77,25 +78,31 @@ const SkillsAccordion = () => {
             className="border border-gray-300 rounded-lg shadow-md"
           >
             <button
-              className="w-full text-left p-4 text-lg font-bold flex justify-between items-center"
+              className="w-full text-left p-2 md:p-4 text-lg font-bold flex justify-between items-center"
               onClick={() => toggleAccordion(index)}
             >
-              {skill.title}
-              <span>{activeIndex === index ? "−" : "+"}</span>
+              <span className="flex-1">{skill.title}</span>
+              <span
+                className={
+                  activeIndex === index
+                    ? "text-red-600 text-2xl font-bold ml-2 select-none flex items-center leading-none relative -top-0.5"
+                    : "text-blue-600 text-2xl font-bold ml-2 cursor-pointer select-none flex items-center leading-none relative -top-0.5"
+                }
+                style={{ lineHeight: 1 }}
+              >
+                {activeIndex === index ? "×" : "+"}
+              </span>
             </button>
             {activeIndex === index && (
-              <ul className="list-disc list-inside p-4 text-gray-700 space-y-2">
+              <ul className="list-disc list-inside p-2 md:p-4 text-gray-700 space-y-2">
                 {skill.details.map((detail, i) => (
                   <li key={i}>{detail}</li>
                 ))}
-                {/* Ссылка только для Frontend & Backend Developer */}
-                {skill.title.includes("Frontend") && (
-                  <li>
-                    <Link to="/projects" className="text-blue-500 underline">
-                      👉 Смотреть проекты
-                    </Link>
-                  </li>
-                )}
+                <li>
+                  <Link to="/projects" className="text-blue-500 underline">
+                    👉 Смотреть проекты
+                  </Link>
+                </li>
               </ul>
             )}
           </div>
