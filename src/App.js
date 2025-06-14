@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 import Love from "./components/Love"; // Импорт компонента Love
 import ProjectDetails from "./components/ProjectDetails";
+import "./i18n";
 
 const App = () => {
   return (
