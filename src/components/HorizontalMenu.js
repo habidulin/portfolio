@@ -11,10 +11,11 @@ const HorizontalMenu = () => {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          isActive ? "text-yellow-400" : "hover:text-yellow-400"
+          isActive ? "text-yellow-400 flex items-center" : "hover:text-yellow-400 flex items-center"
         }
       >
-        <img src="/logo512.png" alt="Главная" className="w-12 h-12" />
+        <img src="/logo512.png" alt={t("menu.welcome")} className="w-8 h-8 mr-8" />
+        <span>{t("menu.welcome")}</span>
       </NavLink>
       <NavLink
         to="/skills"
@@ -25,14 +26,6 @@ const HorizontalMenu = () => {
         {t("menu.skills")}
       </NavLink>
       <NavLink
-        to="/about"
-        className={({ isActive }) =>
-          isActive ? "text-yellow-400" : "hover:text-yellow-400"
-        }
-      >
-        {t("menu.about")}
-      </NavLink>
-      <NavLink
         to="/projects"
         className={({ isActive }) =>
           isActive ? "text-yellow-400" : "hover:text-yellow-400"
@@ -41,13 +34,21 @@ const HorizontalMenu = () => {
         {t("menu.projects")}
       </NavLink>
       <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          isActive ? "text-yellow-400" : "hover:text-yellow-400"
+        }
+      >
+        {t("menu.about")}
+      </NavLink>
+      {/* <NavLink
         to="/love"
         className={({ isActive }) =>
           isActive ? "text-yellow-400" : "hover:text-yellow-400"
         }
       >
         {t("menu.love")}
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to="/contact"
         className={({ isActive }) =>

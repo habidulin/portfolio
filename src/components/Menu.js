@@ -49,17 +49,6 @@ const Menu = () => {
           </li>
           <li>
             <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              {t("menu.about")}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/projects"
               className={({ isActive }) =>
                 isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
@@ -71,6 +60,17 @@ const Menu = () => {
           </li>
           <li>
             <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
+              }
+              onClick={() => setIsOpen(false)}
+            >
+              {t("menu.about")}
+            </NavLink>
+          </li>
+          {/* <li>
+            <NavLink
               to="/love"
               className={({ isActive }) =>
                 isActive ? "text-yellow-400 text-xl" : "hover:text-yellow-400 text-xl"
@@ -79,7 +79,7 @@ const Menu = () => {
             >
               {t("menu.love")}
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               to="/contact"

@@ -7,7 +7,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
-import Love from "./components/Love"; // Импорт компонента Love
+// import Love from "./components/Love";
 import ProjectDetails from "./components/ProjectDetails";
 import "./i18n";
 
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/love" element={<Love />} />
+        {/* <Route path="/love" element={<Love />} /> */}
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/projects/:id" element={<ProjectDetails projects={projects} />} />
       </Routes>
