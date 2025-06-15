@@ -1,11 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types"; // Импорт PropTypes
+import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
 const Header = ({ name = "Maksym" }) => {
+  const { t } = useTranslation();
+
   return (
     <header className="bg-blue-500 text-white p-4">
-      <h1 className="text-2xl font-bold mb-4">Привет, я {name}!</h1>
+      <h1 className="text-2xl font-bold mb-4">{t("header_greeting", { name })}</h1>
       <nav>
         <ul className="flex space-x-4">
           <li>
@@ -15,7 +18,7 @@ const Header = ({ name = "Maksym" }) => {
                 isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
             >
-              Обо мне
+              {t("menu.about")}
             </NavLink>
           </li>
           <li>
@@ -25,7 +28,7 @@ const Header = ({ name = "Maksym" }) => {
                 isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
             >
-              Проекты
+              {t("menu.projects")}
             </NavLink>
           </li>
           <li>
@@ -35,7 +38,7 @@ const Header = ({ name = "Maksym" }) => {
                 isActive ? "text-yellow-400" : "hover:text-yellow-400"
               }
             >
-              Контакты
+              {t("menu.contact")}
             </NavLink>
           </li>
         </ul>
@@ -44,7 +47,6 @@ const Header = ({ name = "Maksym" }) => {
   );
 };
 
-// Добавление PropTypes для проверки типа пропса name
 Header.propTypes = {
   name: PropTypes.string.isRequired,
 };

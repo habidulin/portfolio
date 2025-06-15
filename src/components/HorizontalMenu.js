@@ -1,7 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const HorizontalMenu = () => {
+  const { t } = useTranslation();
+
   return (
     <nav className="hidden md:flex justify-center items-center space-x-8 bg-gray-800 text-white p-1">
       <NavLink
@@ -18,7 +22,7 @@ const HorizontalMenu = () => {
           isActive ? "text-yellow-400" : "hover:text-yellow-400"
         }
       >
-        Навыки
+        {t("menu.skills")}
       </NavLink>
       <NavLink
         to="/about"
@@ -26,7 +30,7 @@ const HorizontalMenu = () => {
           isActive ? "text-yellow-400" : "hover:text-yellow-400"
         }
       >
-        О себе
+        {t("menu.about")}
       </NavLink>
       <NavLink
         to="/projects"
@@ -34,7 +38,7 @@ const HorizontalMenu = () => {
           isActive ? "text-yellow-400" : "hover:text-yellow-400"
         }
       >
-        Проекты
+        {t("menu.projects")}
       </NavLink>
       <NavLink
         to="/love"
@@ -42,7 +46,7 @@ const HorizontalMenu = () => {
           isActive ? "text-yellow-400" : "hover:text-yellow-400"
         }
       >
-        Саша
+        {t("menu.love")}
       </NavLink>
       <NavLink
         to="/contact"
@@ -50,8 +54,9 @@ const HorizontalMenu = () => {
           isActive ? "text-yellow-400" : "hover:text-yellow-400"
         }
       >
-        Контакты
+        {t("menu.contact")}
       </NavLink>
+      <LanguageSwitcher />
     </nav>
   );
 };

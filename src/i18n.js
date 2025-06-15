@@ -8,13 +8,13 @@ import ua from "./locales/ua/translation.json";
 
 i18n.use(initReactI18next).init({
   resources: {
+    ua: { translation: ua },
     ru: { translation: ru },
-    en: { translation: en },
     de: { translation: de },
-    ua: { translation: ua }
+    en: { translation: en }
   },
-  lng: "ru", // язык по умолчанию
-  fallbackLng: "ru",
+  lng: "de", // язык по умолчанию
+  fallbackLng: "de",
   interpolation: {
     escapeValue: false
   }

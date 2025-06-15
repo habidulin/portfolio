@@ -1,64 +1,66 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const SkillsAccordion = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const { t } = useTranslation();
 
   const skills = [
     {
-      title: "🧑‍💻 Frontend & Backend Developer",
+      title: t("skills.skill_frontend_title"),
       details: [
-        "Дизайн и разработка сайтов",
-        "Вёрстка, настройка серверной логики",
-        "Оптимизация, публикация, поддержка",
+        t("skills.skill_frontend_1"),
+        t("skills.skill_frontend_2"),
+        t("skills.skill_frontend_3"),
       ],
     },
     {
-      title: "📱 Apple-Reparaturtechniker",
+      title: t("skills.skill_apple_title"),
       details: [
-        "Диагностика, ремонт, приём клиентов",
-        "Управление складом, заказ запчастей",
-        "Настройка рабочих мест и оборудования",
+        t("skills.skill_apple_1"),
+        t("skills.skill_apple_2"),
+        t("skills.skill_apple_3"),
       ],
     },
     {
-      title: "🎯 Digital Marketing Manager",
+      title: t("skills.skill_marketing_title"),
       details: [
-        "Google Ads: запуск и ведение кампаний",
-        "Аналитика, A/B тесты, оптимизация",
-        "Работа с UTM-метками, CRM, лендингами",
+        t("skills.skill_marketing_1"),
+        t("skills.skill_marketing_2"),
+        t("skills.skill_marketing_3"),
       ],
     },
     {
-      title: "🎨 UI/UX Designer & Visual Branding",
+      title: t("skills.skill_uiux_title"),
       details: [
-        "Прототипы и интерфейсы от руки и в Figma",
-        "Полный цикл визуального брендинга",
-        "Дизайн визиток, баннеров, листовок",
+        t("skills.skill_uiux_1"),
+        t("skills.skill_uiux_2"),
+        t("skills.skill_uiux_3"),
       ],
     },
     {
-      title: "🧩 IT-Business Organizer / Geschäftsführer",
+      title: t("skills.skill_business_title"),
       details: [
-        "Построение команды и рабочих процессов",
-        "Внедрение CRM, распределение ролей",
-        "Управление рекламой, финансами, складом",
+        t("skills.skill_business_1"),
+        t("skills.skill_business_2"),
+        t("skills.skill_business_3"),
       ],
     },
     {
-      title: "📋 Projekt- und Teamleiter",
+      title: t("skills.skill_team_title"),
       details: [
-        "Набор, обучение и координация сотрудников",
-        "Планирование задач и контроль качества",
-        "Общение с клиентами, решение нестандартных ситуаций",
+        t("skills.skill_team_1"),
+        t("skills.skill_team_2"),
+        t("skills.skill_team_3"),
       ],
     },
     {
-      title: "⚙️ Создатель и интегратор бизнес-процессов",
+      title: t("skills.skill_process_title"),
       details: [
-        "Автоматизация процессов: от заказа до учёта",
-        "Взаимодействие с подрядчиками и поставщиками",
-        "Опыт масштабирования и открытия новых точек",
+        t("skills.skill_process_1"),
+        t("skills.skill_process_2"),
+        t("skills.skill_process_3"),
       ],
     },
   ];
@@ -66,10 +68,10 @@ const SkillsAccordion = () => {
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-  
+
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Мои навыки</h1>
+      <h1 className="text-2xl font-bold mb-4">{t("menu.skills")}</h1>
       <div className="space-y-4">
         {skills.map((skill, index) => (
           <div
@@ -99,7 +101,7 @@ const SkillsAccordion = () => {
                 ))}
                 <li>
                   <Link to="/projects" className="text-blue-500 underline">
-                    👉 Смотреть проекты
+                    👉 {t("common.watch_projects")}
                   </Link>
                 </li>
               </ul>

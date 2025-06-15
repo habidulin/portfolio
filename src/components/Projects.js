@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const projects = [
   {
     id: 1,
-    title: "Engel&Völkers 2023-2025 🗓",
-    description: "Внедрил комплексную систему координации, которая способствует организации информации, сотрудничеству и стратегическому планированию в маркетинговой команде.",
-    link: "#",
     images: [
       { src: "../assets/images/ev1.jpg", alt: "EV 1" },
       { src: "../assets/images/ev2.jpg", alt: "EV 2" },
@@ -15,10 +13,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "🛒 Online Store",
-    description: "Интернет-магазин с корзиной, оплатой и панелью администратора. Стек: React, Node.js, MongoDB.",
-    link: "#",
-       images: [
+    images: [
       { src: "../assets/images/ev1.jpg", alt: "EV 1" },
       { src: "../assets/images/ev2.jpg", alt: "EV 2" },
       { src: "../assets/images/ev3.jpg", alt: "EV 3" },
@@ -26,10 +21,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "📱 Mobile App",
-    description: "Мобильное приложение для заметок с синхронизацией и push-уведомлениями. Реализовано на React Native.",
-    link: "#",
-       images: [
+    images: [
       { src: "../assets/images/ev1.jpg", alt: "EV 1" },
       { src: "../assets/images/ev2.jpg", alt: "EV 2" },
       { src: "../assets/images/ev3.jpg", alt: "EV 3" },
@@ -37,19 +29,17 @@ export const projects = [
   },
 ];
 
-  const Projects = () => {
+const Projects = () => {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [current, setCurrent] = useState(0);
-
-  // Для хранения картинок текущего проекта
   const [modalImages, setModalImages] = useState([]);
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  // Открыть модалку с нужным массивом картинок
   const openModal = (imagesArr, idx) => {
     setModalImages(imagesArr);
     setCurrent(idx);
@@ -70,7 +60,7 @@ export const projects = [
 
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Мои проекты</h2>
+      <h2 className="text-2xl font-bold mb-4">{t("menu.projects")}</h2>
       <div className="space-y-4">
         {projects.map((project, index) => (
           <div
@@ -81,7 +71,7 @@ export const projects = [
               className="w-full text-left p-2 md:p-4 text-lg font-bold flex justify-between items-center"
               onClick={() => toggleAccordion(index)}
             >
-              <span className="flex-1">{project.title}</span>
+              <span className="flex-1">{t(`projects.project_${project.id}_title`)}</span>
               <span
                 className={
                   activeIndex === index
@@ -95,7 +85,6 @@ export const projects = [
             </button>
             {activeIndex === index && (
               <div className="p-2 md:p-4 text-gray-700 space-y-4">
-                {/* Только для Engel&Völkers показываем картинки */}
                 {project.images && (
                   <div className="grid grid-cols-3 grid-rows-2 gap-2 items-center">
                     <img
@@ -118,12 +107,12 @@ export const projects = [
                     />
                   </div>
                 )}
-                <p>{project.description}</p>
-                <Link                  
+                <p>{t(`projects.project_${project.id}_desc`)}</p>
+                <Link
                   to={`/projects/${project.id}`}
                   className="text-blue-500 underline"
                 >
-                  👉 Перейти к проекту
+                  👉 {t("common.go_to_project")}
                 </Link>
               </div>
             )}

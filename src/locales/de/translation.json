@@ -1,10 +1,73 @@
 {
-  "projects": "Meine Projekte",
-  "skills": "Meine Fähigkeiten",
-  "back_to_projects": "Zurück zu den Projekten 👈",
-  "not_found": "Projekt nicht gefunden",
-  "welcome": "Willkommen!",
-  "contact": "Kontakt",
-  "go_to_project": "Zum Projekt",
-  "watch_projects": "Projekte ansehen"
+  "menu": {
+    "projects": "Meine Projekte",
+    "skills": "Meine Fähigkeiten",
+    "about": "Über mich",
+    "love": "Liebe",
+    "contact": "Kontakt",
+    "welcome": "Willkommen!"
+  },
+  "home": {
+    "hello": "Hallo!",
+    "home_welcome": "Willkommen in meinem Portfolio. Hier erfahren Sie mehr über meine Projekte und Fähigkeiten."
+  },
+  "about": {
+    "about_me_title": "Über mich",
+    "about_me_intro": "Hallo! Ich heiße Maksym und bin Entwickler mit Erfahrung in der Erstellung moderner Webanwendungen. Ich spezialisiere mich auf React, Tailwind CSS und andere moderne Technologien.",
+    "about_me_portfolio": "In diesem Portfolio finden Sie meine Projekte, Fähigkeiten und Kontaktinformationen. Danke, dass Sie meine Seite besucht haben!",
+    "about_skills_title": "Meine Fähigkeiten und mehr",
+    "about_me_thanks": "Das bin ich! Danke, dass Sie meine Seite besucht haben."
+  },
+  "skills": {
+    "skill_frontend_title": "🧑‍💻 Frontend & Backend Entwickler",
+    "skill_frontend_1": "Webseiten-Design und Entwicklung",
+    "skill_frontend_2": "Layout, Serverlogik-Einrichtung",
+    "skill_frontend_3": "Optimierung, Veröffentlichung, Support",
+    "skill_apple_title": "📱 Apple-Reparaturtechniker",
+    "skill_apple_1": "Diagnose, Reparatur, Kundenservice",
+    "skill_apple_2": "Lagerverwaltung, Ersatzteilbestellung",
+    "skill_apple_3": "Arbeitsplatz- und Geräteeinrichtung",
+    "skill_marketing_title": "🎯 Digital Marketing Manager",
+    "skill_marketing_1": "Google Ads: Kampagnenstart und -verwaltung",
+    "skill_marketing_2": "Analytik, A/B-Tests, Optimierung",
+    "skill_marketing_3": "Arbeiten mit UTM-Tags, CRM, Landingpages",
+    "skill_uiux_title": "🎨 UI/UX Designer & Visuelles Branding",
+    "skill_uiux_1": "Prototypen und Interfaces per Hand und in Figma",
+    "skill_uiux_2": "Kompletter Zyklus des visuellen Brandings",
+    "skill_uiux_3": "Design von Visitenkarten, Bannern, Flyern",
+    "skill_business_title": "🧩 IT-Business Organizer / Geschäftsführer",
+    "skill_business_1": "Teambildung und Prozessaufbau",
+    "skill_business_2": "CRM-Implementierung, Rollenzuteilung",
+    "skill_business_3": "Werbung, Finanzen, Lagerverwaltung",
+    "skill_team_title": "📋 Projekt- und Teamleiter",
+    "skill_team_1": "Rekrutierung, Schulung und Koordination",
+    "skill_team_2": "Aufgabenplanung und Qualitätskontrolle",
+    "skill_team_3": "Kundenkommunikation, Lösung von Sonderfällen",
+    "skill_process_title": "⚙️ Ersteller und Integrator von Geschäftsprozessen",
+    "skill_process_1": "Prozessautomatisierung: von Bestellung bis Buchhaltung",
+    "skill_process_2": "Zusammenarbeit mit Auftragnehmern und Lieferanten",
+    "skill_process_3": "Erfahrung mit Skalierung und Neueröffnungen"
+  },
+  "projects": {
+    "project_1_title": "Engel&Völkers 2023-2025 🗓",
+    "project_1_desc": "Implementierte ein umfassendes Koordinationssystem zur Verbesserung der Informationsorganisation, Zusammenarbeit und strategischen Planung im Marketingteam.",
+    "project_2_title": "🛒 Online-Shop",
+    "project_2_desc": "Online-Shop mit Warenkorb, Bezahlung und Admin-Panel. Stack: React, Node.js, MongoDB.",
+    "project_3_title": "📱 Mobile App",
+    "project_3_desc": "Mobile Notizen-App mit Synchronisation und Push-Benachrichtigungen. Erstellt mit React Native."
+  },
+  "contact": {
+    "contact_me": "Kontakt aufnehmen",
+    "contact_name_placeholder": "Ihr Name",
+    "contact_email_placeholder": "Ihre E-Mail",
+    "contact_message_placeholder": "Ihre Nachricht",
+    "contact_send": "Senden"
+  },
+  "common": {
+    "back_to_projects": "Zurück zu den Projekten 👈",
+    "not_found": "Projekt nicht gefunden",
+    "go_to_project": "Zum Projekt",
+    "watch_projects": "Projekte ansehen",
+    "and_version_control": "und Versionskontrolle"
+  }
 }

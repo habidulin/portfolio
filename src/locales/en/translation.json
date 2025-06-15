@@ -1,10 +1,73 @@
 {
-  "projects": "My Projects",
-  "skills": "My Skills",
-  "back_to_projects": "Back to Projects 👈",
-  "not_found": "Project not found",
-  "welcome": "Welcome!",
-  "contact": "Contacts",
-  "go_to_project": "Go to project",
-  "watch_projects": "Watch projects"
+  "menu": {
+    "projects": "My Projects",
+    "skills": "My Skills",
+    "about": "About",
+    "love": "Love",
+    "contact": "Contacts",
+    "welcome": "Welcome!"
+  },
+  "home": {
+    "hello": "Hello!",
+    "home_welcome": "Welcome to my portfolio. Here you can learn more about my projects and skills."
+  },
+  "about": {
+    "about_me_title": "About Me",
+    "about_me_intro": "Hi! My name is Maksym, and I am a developer experienced in building modern web applications. I specialize in React, Tailwind CSS, and other modern technologies.",
+    "about_me_portfolio": "In this portfolio, you will find my projects, skills, and contact information. Thank you for visiting my site!",
+    "about_skills_title": "My Skills and More",
+    "about_me_thanks": "That's me! Thank you for visiting my site."
+  },
+  "skills": {
+    "skill_frontend_title": "🧑‍💻 Frontend & Backend Developer",
+    "skill_frontend_1": "Website design and development",
+    "skill_frontend_2": "Layout, server logic setup",
+    "skill_frontend_3": "Optimization, deployment, support",
+    "skill_apple_title": "📱 Apple Repair Technician",
+    "skill_apple_1": "Diagnostics, repair, client service",
+    "skill_apple_2": "Warehouse management, ordering parts",
+    "skill_apple_3": "Workplace and equipment setup",
+    "skill_marketing_title": "🎯 Digital Marketing Manager",
+    "skill_marketing_1": "Google Ads: campaign launch and management",
+    "skill_marketing_2": "Analytics, A/B testing, optimization",
+    "skill_marketing_3": "Working with UTM tags, CRM, landing pages",
+    "skill_uiux_title": "🎨 UI/UX Designer & Visual Branding",
+    "skill_uiux_1": "Prototypes and interfaces by hand and in Figma",
+    "skill_uiux_2": "Full cycle of visual branding",
+    "skill_uiux_3": "Design of business cards, banners, flyers",
+    "skill_business_title": "🧩 IT-Business Organizer / CEO",
+    "skill_business_1": "Team building and workflow setup",
+    "skill_business_2": "CRM implementation, role distribution",
+    "skill_business_3": "Advertising, finance, warehouse management",
+    "skill_team_title": "📋 Project and Team Leader",
+    "skill_team_1": "Recruitment, training, and coordination",
+    "skill_team_2": "Task planning and quality control",
+    "skill_team_3": "Client communication, solving non-standard situations",
+    "skill_process_title": "⚙️ Business Process Creator and Integrator",
+    "skill_process_1": "Process automation: from order to accounting",
+    "skill_process_2": "Interaction with contractors and suppliers",
+    "skill_process_3": "Experience in scaling and opening new locations"
+  },
+  "projects": {
+    "project_1_title": "Engel&Völkers 2023-2025 🗓",
+    "project_1_desc": "Implemented a comprehensive coordination system that improves information organization, collaboration, and strategic planning in the marketing team.",
+    "project_2_title": "🛒 Online Store",
+    "project_2_desc": "Online store with cart, payment, and admin panel. Stack: React, Node.js, MongoDB.",
+    "project_3_title": "📱 Mobile App",
+    "project_3_desc": "A note-taking mobile app with sync and push notifications. Built with React Native."
+  },
+  "contact": {
+    "contact_me": "Contact me",
+    "contact_name_placeholder": "Your name",
+    "contact_email_placeholder": "Your email",
+    "contact_message_placeholder": "Your message",
+    "contact_send": "Send"
+  },
+  "common": {
+    "back_to_projects": "Back to projects 👈",
+    "not_found": "Project not found",
+    "go_to_project": "Go to project",
+    "watch_projects": "View projects",
+    "and_version_control": "and version control"
+  }
 }
