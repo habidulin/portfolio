@@ -15,15 +15,17 @@ const App = () => {
   return (
     <>
       <Menu />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects />} />
-        {/* <Route path="/love" element={<Love />} /> */}
-        <Route path="/contact" element={<ContactForm />} />
-        <Route path="/projects/:id" element={<ProjectDetails projects={projects} />} />
-      </Routes>
+      <div className="max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto px-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          {/* <Route path="/love" element={<Love />} /> */}
+          <Route path="/contact" element={<ContactForm />} />
+          <Route path="/projects/:id" element={<ProjectDetails projects={projects} />} />
+        </Routes>
+      </div>
     </>
   );
 };

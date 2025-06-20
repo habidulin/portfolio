@@ -14,17 +14,17 @@ export const projects = [
   {
     id: 2,
     images: [
-      { src: "../assets/images/ev1.jpg", alt: "EV 1" },
-      { src: "../assets/images/ev2.jpg", alt: "EV 2" },
-      { src: "../assets/images/ev3.jpg", alt: "EV 3" },
+      { src: "../assets/images/lv3.jpg", alt: "LV 3" },
+      { src: "../assets/images/lv1.jpg", alt: "LV 1" },
+      { src: "../assets/images/lv2.jpg", alt: "LV 2" },
     ],
   },
   {
     id: 3,
     images: [
-      { src: "../assets/images/ev1.jpg", alt: "EV 1" },
-      { src: "../assets/images/ev2.jpg", alt: "EV 2" },
-      { src: "../assets/images/ev3.jpg", alt: "EV 3" },
+      { src: "../assets/images/se2.jpg", alt: "SE 2" },
+      { src: "../assets/images/se1.jpg", alt: "SE 1" },
+      { src: "../assets/images/se3.jpg", alt: "SE 3" },
     ],
   },
 ];
