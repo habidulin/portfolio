@@ -69,5 +69,29 @@
     "go_to_project": "Go to project",
     "watch_projects": "View projects",
     "and_version_control": "and version control"
+  },
+  "timeline": {
+    "year_2025_title": "Career Development",
+    "year_2025_desc": "Advancing in frontend developer career, mastering new technologies.",
+    "year_2024_title": "Portfolio Launch",
+    "year_2024_desc": "Creation and publication of personal web developer portfolio.",
+    "year_2023_title": "Learning React and Tailwind",
+    "year_2023_desc": "Diving into React ecosystem, mastering Tailwind CSS and modern tools.",
+    "year_2022_title": "First Freelance Project",
+    "year_2022_desc": "Successfully completing first commercial project for a local business.",
+    "year_2021_title": "Beginning Web Development",
+    "year_2021_desc": "First steps in HTML, CSS, and JavaScript, creating simple web pages.",
+    "year_2020_title": "Introduction to Programming",
+    "year_2020_desc": "Learning programming basics and algorithms.",
+    "year_2019_title": "Education",
+    "year_2019_desc": "Enrollment and start of university studies.",
+    "year_2018_title": "First Achievements",
+    "year_2018_desc": "Important steps in development and education.",
+    "year_2017_title": "Growth",
+    "year_2017_desc": "Expanding knowledge and skills.",
+    "year_2016_title": "Interest Formation",
+    "year_2016_desc": "Defining main directions of development.",
+    "year_2015_title": "Beginning of Journey",
+    "year_2015_desc": "First steps on the life path."
   }
 }

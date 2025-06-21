@@ -69,5 +69,29 @@
     "go_to_project": "Zum Projekt",
     "watch_projects": "Projekte ansehen",
     "and_version_control": "und Versionskontrolle"
+  },
+    "timeline": {
+    "year_2025_title": "Karriereentwicklung",
+    "year_2025_desc": "Fortschritte in der Karriere als Frontend-Entwickler, Erlernen neuer Technologien.",
+    "year_2024_title": "Portfolio-Launch",
+    "year_2024_desc": "Erstellung und Veröffentlichung eines persönlichen Webentwickler-Portfolios.",
+    "year_2023_title": "Lernen von React und Tailwind",
+    "year_2023_desc": "Eintauchen in das React-Ökosystem, Beherrschung von Tailwind CSS und modernen Tools.",
+    "year_2022_title": "Erstes Freelance-Projekt",
+    "year_2022_desc": "Erfolgreicher Abschluss des ersten kommerziellen Projekts für ein lokales Unternehmen.",
+    "year_2021_title": "Beginn des Webentwicklungsstudiums",
+    "year_2021_desc": "Erste Schritte in HTML, CSS und JavaScript, Erstellung einfacher Webseiten.",
+    "year_2020_title": "Einführung in die Programmierung",
+    "year_2020_desc": "Erlernen von Programmiergrundlagen und Algorithmen.",
+    "year_2019_title": "Studium",
+    "year_2019_desc": "Immatrikulation und Beginn des Universitätsstudiums.",
+    "year_2018_title": "Erste Erfolge",
+    "year_2018_desc": "Wichtige Schritte in Entwicklung und Bildung.",
+    "year_2017_title": "Wachstum",
+    "year_2017_desc": "Erweiterung von Wissen und Fähigkeiten.",
+    "year_2016_title": "Interessenbildung",
+    "year_2016_desc": "Definition der Hauptentwicklungsrichtungen.",
+    "year_2015_title": "Beginn der Reise",
+    "year_2015_desc": "Erste Schritte auf dem Lebensweg."
   }
 }
