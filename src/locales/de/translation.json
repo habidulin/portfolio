@@ -70,28 +70,38 @@
     "watch_projects": "Projekte ansehen",
     "and_version_control": "und Versionskontrolle"
   },
-    "timeline": {
+  "timeline": {
     "year_2025_title": "Karriereentwicklung",
-    "year_2025_desc": "Fortschritte in der Karriere als Frontend-Entwickler, Erlernen neuer Technologien.",
-    "year_2024_title": "Portfolio-Launch",
-    "year_2024_desc": "Erstellung und Veröffentlichung eines persönlichen Webentwickler-Portfolios.",
-    "year_2023_title": "Lernen von React und Tailwind",
-    "year_2023_desc": "Eintauchen in das React-Ökosystem, Beherrschung von Tailwind CSS und modernen Tools.",
-    "year_2022_title": "Erstes Freelance-Projekt",
-    "year_2022_desc": "Erfolgreicher Abschluss des ersten kommerziellen Projekts für ein lokales Unternehmen.",
-    "year_2021_title": "Beginn des Webentwicklungsstudiums",
-    "year_2021_desc": "Erste Schritte in HTML, CSS und JavaScript, Erstellung einfacher Webseiten.",
-    "year_2020_title": "Einführung in die Programmierung",
-    "year_2020_desc": "Erlernen von Programmiergrundlagen und Algorithmen.",
-    "year_2019_title": "Studium",
-    "year_2019_desc": "Immatrikulation und Beginn des Universitätsstudiums.",
-    "year_2018_title": "Erste Erfolge",
-    "year_2018_desc": "Wichtige Schritte in Entwicklung und Bildung.",
-    "year_2017_title": "Wachstum",
-    "year_2017_desc": "Erweiterung von Wissen und Fähigkeiten.",
-    "year_2016_title": "Interessenbildung",
-    "year_2016_desc": "Definition der Hauptentwicklungsrichtungen.",
-    "year_2015_title": "Beginn der Reise",
-    "year_2015_desc": "Erste Schritte auf dem Lebensweg."
+    "year_2025_desc": "Arbeitet bei Engel & Völkers im digitalen Marketing. Vertieft Kenntnisse in Frontend- und Full-Stack-Entwicklung.",
+
+    "year_2024_title": "Portfolio & Bootcamp",
+    "year_2024_desc": "Bootcamp bei Le Wagon in Berlin abgeschlossen. Eigenes Portfolio entwickelt und veröffentlicht.",
+
+    "year_2023_title": "React & Projekte",
+    "year_2023_desc": "React, Tailwind und PostgreSQL gelernt. Projekt Avikan entwickelt. YouTube-Kanal von 800 auf 20.000 Abos gesteigert.",
+
+    "year_2022_title": "Wechsel zur IT",
+    "year_2022_desc": "Aus dem Geschäftsleben ausgestiegen und mit Webentwicklung begonnen. Erste Freelancer-Projekte umgesetzt.",
+
+    "year_2021_title": "Vorbereitung",
+    "year_2021_desc": "Grundlagen in JavaScript und Webdesign gelernt. Projekte geplant und Technologien erforscht.",
+
+    "year_2020_title": "Erstes reales Projekt",
+    "year_2020_desc": "Website für lokale Autowaschanlage gebaut. Erste Erfahrungen mit HTML/CSS gesammelt.",
+
+    "year_2019_title": "Unternehmensführung",
+    "year_2019_desc": "Leitung von R_Apple. Systeme zur Prozessautomatisierung und Teamsteuerung aufgebaut.",
+
+    "year_2018_title": "Werkstattsoftware",
+    "year_2018_desc": "Digitale Lösung für Reparaturmanagement erstellt. Fokus auf Lager- und Bestandskontrolle.",
+
+    "year_2017_title": "Hotelprojekt",
+    "year_2017_desc": "Hotelmanagementsystem mit Buchung und Reinigung entwickelt. Benutzerfreundliche Oberfläche erstellt.",
+
+    "year_2016_title": "Startup-Gründung",
+    "year_2016_desc": "R_Apple gegründet. In 5 Städten expandiert. Mitarbeiterstruktur und Motivationstools etabliert.",
+
+    "year_2015_title": "Studienabschluss",
+    "year_2015_desc": "Bachelor in Chemie abgeschlossen. Orientierung und neue Interessen entdeckt."
   }
 }

@@ -71,27 +71,37 @@
     "and_version_control": "and version control"
   },
   "timeline": {
-    "year_2025_title": "Career Development",
-    "year_2025_desc": "Advancing in frontend developer career, mastering new technologies.",
-    "year_2024_title": "Portfolio Launch",
-    "year_2024_desc": "Creation and publication of personal web developer portfolio.",
-    "year_2023_title": "Learning React and Tailwind",
-    "year_2023_desc": "Diving into React ecosystem, mastering Tailwind CSS and modern tools.",
-    "year_2022_title": "First Freelance Project",
-    "year_2022_desc": "Successfully completing first commercial project for a local business.",
-    "year_2021_title": "Beginning Web Development",
-    "year_2021_desc": "First steps in HTML, CSS, and JavaScript, creating simple web pages.",
-    "year_2020_title": "Introduction to Programming",
-    "year_2020_desc": "Learning programming basics and algorithms.",
-    "year_2019_title": "Education",
-    "year_2019_desc": "Enrollment and start of university studies.",
-    "year_2018_title": "First Achievements",
-    "year_2018_desc": "Important steps in development and education.",
-    "year_2017_title": "Growth",
-    "year_2017_desc": "Expanding knowledge and skills.",
-    "year_2016_title": "Interest Formation",
-    "year_2016_desc": "Defining main directions of development.",
-    "year_2015_title": "Beginning of Journey",
-    "year_2015_desc": "First steps on the life path."
+    "year_2025_title": "Career development",
+    "year_2025_desc": "Working at Engel & Völkers as a digital marketing specialist. Enhancing frontend skills and full-stack expertise.",
+
+    "year_2024_title": "Portfolio and Bootcamp",
+    "year_2024_desc": "Graduated from Le Wagon in Berlin. Built and launched personal portfolio. Created internal systems at Engel & Völkers.",
+
+    "year_2023_title": "React & Digital Projects",
+    "year_2023_desc": "Learned React, Tailwind, PostgreSQL. Developed Avikan app. Boosted YouTube from 800 to 20K at Service_in_Ua.",
+
+    "year_2022_title": "Shift to IT",
+    "year_2022_desc": "Moved away from business. Started studying frontend and completed first freelance projects.",
+
+    "year_2021_title": "Preparation Phase",
+    "year_2021_desc": "Researched IT industry. Learned JavaScript basics. Worked on early mockups and site structures.",
+
+    "year_2020_title": "First real-world site",
+    "year_2020_desc": "Launched a full website for a local car wash. Gained first development experience.",
+
+    "year_2019_title": "Leading a business",
+    "year_2019_desc": "Managed R_Apple operations. Handled automation, hiring, and internal systems development.",
+
+    "year_2018_title": "Garage project",
+    "year_2018_desc": "Built internal tools for auto repair shop. First experience with practical software design.",
+
+    "year_2017_title": "Hotel system",
+    "year_2017_desc": "Developed a hotel management app with booking, cleaning, and reports. Focus on usability.",
+
+    "year_2016_title": "Startup journey",
+    "year_2016_desc": "Founded R_Apple. Grew to 5 offices in 5 cities. Created transparent motivation systems.",
+
+    "year_2015_title": "University graduation",
+    "year_2015_desc": "Earned Bachelor's degree in Chemistry. Searching for new directions and passions."
   }
 }
