@@ -7,7 +7,7 @@ const Header = ({ name = "Maksym" }) => {
   const { t } = useTranslation();
 
   return (
-    <header className="bg-blue-500 text-white p-4">
+    <header className="bg-blue-500 text-white p-2">
       <h1 className="text-2xl font-bold mb-4">{t("header_greeting", { name })}</h1>
       <nav>
         <ul className="flex space-x-4">

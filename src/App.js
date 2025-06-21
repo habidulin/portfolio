@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <Menu />
-      <div className="max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto px-4">
+      <div className="max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

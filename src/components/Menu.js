@@ -14,7 +14,7 @@ const Menu = () => {
     <div>
       {/* Боковое меню (мобильная версия) */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-gray-800 bg-opacity-90 text-white p-4 transform ${
+        className={`fixed top-0 left-0 h-full w-64 bg-gray-800 bg-opacity-90 text-white p-2 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out z-40 md:hidden`}
       >

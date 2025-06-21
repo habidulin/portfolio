@@ -49,7 +49,7 @@
     "skill_process_3": "Erfahrung mit Skalierung und Neueröffnungen"
   },
   "projects": {
-    "project_1_title": "Engel&Völkers 2023-2025 🗓",
+    "project_1_title": "🏠 Engel&Völkers 2023-2025",
     "project_1_desc": "Implementierte ein umfassendes Koordinationssystem zur Verbesserung der Informationsorganisation, Zusammenarbeit und strategischen Planung im Marketingteam.",
     "project_2_title": "🛒 Online-Shop",
     "project_2_desc": "Online-Shop mit Warenkorb, Bezahlung und Admin-Panel. Stack: React, Node.js, MongoDB.",
@@ -58,9 +58,9 @@
   },
   "contact": {
     "contact_me": "Kontakt aufnehmen",
-    "contact_name_placeholder": "Ihr Name",
-    "contact_email_placeholder": "Ihre E-Mail",
-    "contact_message_placeholder": "Ihre Nachricht",
+    "contact_name_placeholder": "Name",
+    "contact_email_placeholder": "E-Mail",
+    "contact_message_placeholder": "Nachricht",
     "contact_send": "Senden"
   },
   "common": {

@@ -42,7 +42,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-2">
       <h2 className="text-2xl font-bold mb-4">{t("contact.contact_me")}</h2>
       <form onSubmit={handleSubmit}>
         {error && <p className="text-red-500 mb-4">{error}</p>}

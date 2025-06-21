@@ -59,7 +59,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-2">
       <h2 className="text-2xl font-bold mb-4">{t("menu.projects")}</h2>
       <div className="space-y-4">
         {projects.map((project, index) => (
@@ -68,7 +68,7 @@ const Projects = () => {
             className="border border-gray-300 rounded-lg shadow-md"
           >
             <button
-              className="w-full text-left p-2 md:p-4 text-lg font-bold flex justify-between items-center"
+              className="w-full text-left p-2 md:p-2 text-lg font-bold flex justify-between items-center"
               onClick={() => toggleAccordion(index)}
             >
               <span className="flex-1">{t(`projects.project_${project.id}_title`)}</span>
@@ -84,7 +84,7 @@ const Projects = () => {
               </span>
             </button>
             {activeIndex === index && (
-              <div className="p-2 md:p-4 text-gray-700 space-y-4">
+              <div className="p-2 md:p-2 text-gray-700 space-y-4">
                 {project.images && (
                   <div className="grid grid-cols-3 grid-rows-2 gap-2 items-center">
                     <img

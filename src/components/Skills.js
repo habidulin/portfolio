@@ -70,7 +70,7 @@ const SkillsAccordion = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-2">
       <h1 className="text-2xl font-bold mb-4">{t("menu.skills")}</h1>
       <div className="space-y-4">
         {skills.map((skill, index) => (
@@ -79,7 +79,7 @@ const SkillsAccordion = () => {
             className="border border-gray-300 rounded-lg shadow-md"
           >
             <button
-              className="w-full text-left p-2 md:p-4 text-lg font-bold flex justify-between items-center"
+              className="w-full text-left p-2 md:p-2 text-lg font-bold flex justify-between items-center"
               onClick={() => toggleAccordion(index)}
             >
               <span className="flex-1">{skill.title}</span>
@@ -95,7 +95,7 @@ const SkillsAccordion = () => {
               </span>
             </button>
             {activeIndex === index && (
-              <ul className="list-disc list-inside p-2 md:p-4 text-gray-700 space-y-2">
+              <ul className="list-disc list-inside p-2 md:p-2 text-gray-700 space-y-2">
                 {skill.details.map((detail, i) => (
                   <li key={i}>{detail}</li>
                 ))}

@@ -5,7 +5,7 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="p-4">
+    <div className="p-2">
       <h1 className="text-2xl font-bold mb-4">{t("about.about_me_title")}</h1>
       <p className="text-base">
         {t("about.about_me_intro")}
