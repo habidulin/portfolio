@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
@@ -8,6 +8,11 @@ const ProjectDetails = ({ projects }) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projects.find((p) => String(p.id) === id);
+
+  // Состояние для модального окна
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImages, setModalImages] = useState([]);
+  const [current, setCurrent] = useState(0);
 
   if (!project) {
     React.useEffect(() => {
@@ -21,6 +26,25 @@ const ProjectDetails = ({ projects }) => {
   
   // Следующий проект для навигации
   const nextProjectId = projects.find(p => p.id > project.id)?.id || projects[0].id;
+    
+  // Функции для модального окна
+  const openModal = (images, index) => {
+    setModalImages(images);
+    setCurrent(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => setModalOpen(false);
+
+  const prevImage = (e) => {
+    e.stopPropagation();
+    setCurrent((prev) => (prev === 0 ? modalImages.length - 1 : prev - 1));
+  };
+
+  const nextImage = (e) => {
+    e.stopPropagation();
+    setCurrent((prev) => (prev === modalImages.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <div className="p-4 max-w-4xl mx-auto">
@@ -31,15 +55,25 @@ const ProjectDetails = ({ projects }) => {
       {/* Галерея изображений */}
       {project.images && (
         <div className="mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {project.images.map((img, idx) => (
-              <img
-                key={idx}
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-48 object-cover rounded-lg shadow-md"
-              />
-            ))}
+          <div className="grid grid-cols-3 grid-rows-2 gap-2 items-center">
+            <img
+              src={project.images[0].src}
+              alt={project.images[0].alt}
+              className="row-span-2 col-span-2 w-full h-64 object-cover rounded-xl shadow-lg cursor-pointer"
+              onClick={() => openModal(project.images, 0)}
+            />
+            <img
+              src={project.images[1]?.src}
+              alt={project.images[1]?.alt}
+              className="w-full h-32 object-cover rounded-xl shadow cursor-pointer"
+              onClick={() => openModal(project.images, 1)}
+            />
+            <img
+              src={project.images[2]?.src}
+              alt={project.images[2]?.alt}
+              className="w-full h-32 object-cover rounded-xl shadow cursor-pointer"
+              onClick={() => openModal(project.images, 2)}
+            />
           </div>
         </div>
       )}
@@ -99,6 +133,42 @@ const ProjectDetails = ({ projects }) => {
           👉 {t("common.next_project")}
         </Link>
       </div>
+      
+      {/* Модальное окно для просмотра изображений */}
+      {modalOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <button
+            className="absolute top-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-2xl rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-gray-300 transition"
+            onClick={closeModal}
+            aria-label={t("common.close")}
+          >
+            &times;
+          </button>
+          <button
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-3xl rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-gray-300 transition"
+            onClick={prevImage}
+            aria-label={t("common.previous")}
+          >
+            &#8592;
+          </button>
+          <img
+            src={modalImages[current]?.src}
+            alt={modalImages[current]?.alt}
+            className="max-h-[80vh] max-w-[90vw] rounded-xl shadow-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-3xl rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-gray-300 transition"
+            onClick={nextImage}
+            aria-label={t("common.next")}
+          >
+            &#8594;
+          </button>
+        </div>
+      )}
     </div>
   );
 };
