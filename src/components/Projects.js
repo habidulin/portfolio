@@ -137,7 +137,7 @@ const Projects = () => {
               </span>
             </button>
             {activeIndex === index && (
-              <div className="p-2 md:p-2 text-gray-700 space-y-4">
+              <div className="p-2 md:p-2 text-gray-700 space-y-2">
                 {project.images && (
                   <div className="grid grid-cols-3 grid-rows-2 gap-2 items-center">
                     <img

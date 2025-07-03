@@ -103,7 +103,7 @@ const Timeline = () => {
               </div>
             
             {/* Содержимое */}
-            <div className="pl-24 pr-2 -mt-2">
+            <div className="pl-24 pr-4 -mt-2">
               <div className="flex pt-4">
                 <div className="flex-1 p-3 border-2 bg-white"
                       style={{
