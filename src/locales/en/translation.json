@@ -23,38 +23,160 @@
     "skill_frontend_1": "Website design and development",
     "skill_frontend_2": "Layout, server logic setup",
     "skill_frontend_3": "Optimization, deployment, support",
+
     "skill_apple_title": "📱 Apple Repair Technician",
     "skill_apple_1": "Diagnostics, repair, client service",
     "skill_apple_2": "Warehouse management, ordering parts",
     "skill_apple_3": "Workplace and equipment setup",
+
     "skill_marketing_title": "🎯 Digital Marketing Manager",
     "skill_marketing_1": "Google Ads: campaign launch and management",
     "skill_marketing_2": "Analytics, A/B testing, optimization",
     "skill_marketing_3": "Working with UTM tags, CRM, landing pages",
+
     "skill_uiux_title": "🎨 UI/UX Designer & Visual Branding",
     "skill_uiux_1": "Prototypes and interfaces by hand and in Figma",
     "skill_uiux_2": "Full cycle of visual branding",
     "skill_uiux_3": "Design of business cards, banners, flyers",
+
     "skill_business_title": "🧩 IT-Business Organizer / CEO",
     "skill_business_1": "Team building and workflow setup",
     "skill_business_2": "CRM implementation, role distribution",
     "skill_business_3": "Advertising, finance, warehouse management",
+
     "skill_team_title": "📋 Project and Team Leader",
     "skill_team_1": "Recruitment, training, and coordination",
     "skill_team_2": "Task planning and quality control",
     "skill_team_3": "Client communication, solving non-standard situations",
+
     "skill_process_title": "⚙️ Business Process Creator and Integrator",
     "skill_process_1": "Process automation: from order to accounting",
     "skill_process_2": "Interaction with contractors and suppliers",
     "skill_process_3": "Experience in scaling and opening new locations"
   },
   "projects": {
-    "project_1_title": "🏠 Engel&Völkers 2023-2025",
-    "project_1_desc": "Implemented a comprehensive coordination system that improves information organization, collaboration, and strategic planning in the marketing team.",
-    "project_2_title": "🛒 Online Store",
-    "project_2_desc": "Online store with cart, payment, and admin panel. Stack: React, Node.js, MongoDB.",
-    "project_3_title": "📱 Mobile App",
-    "project_3_desc": "A note-taking mobile app with sync and push notifications. Built with React Native."
+    "project_1_title": "💼 Engel & Völkers",
+    "project_1_desc": "Corporate website for an international company with interactive elements and a real estate catalog.",
+    "project_1_problem": "low website conversion, outdated design",
+    "project_1_result": "+65% consultation requests after update",
+    
+    "project_2_title": "🏢 LuxVilla",
+    "project_2_desc": "Platform for selling luxury real estate with virtual property tours.",
+    "project_2_problem": "incompatible systems, complex interface",
+    "project_2_result": "unified platform with intuitive management",
+    
+    "project_3_title": "🌐 Service Expert",
+    "project_3_desc": "Online system for service order management with personal accounts for clients and contractors.",
+    "project_3_problem": "manual data management, information loss",
+    "project_3_result": "automated system with backups",
+    
+    "project_4_title": "🏨 Hotel Mardan",
+    "project_4_desc": "Hotel booking site with payment system integration and online calendar.",
+    "project_4_problem": "outdated website → 0 online bookings",
+    "project_4_result": "+45% bookings in 2 months",
+    
+    "project_5_title": "🏠 Engel & Völkers Marketing",
+    "project_5_desc": "Digital Marketing System to improve communication and optimize workflows.",
+    "project_5_problem": "chaos in marketing communication",
+    "project_5_result": "-70% unnecessary correspondence, +80% transparency",
+    
+    "project_6_title": "🎯 Service_in_Ua",
+    "project_6_desc": "Growth Marketing System to increase audience and engagement on social media.",
+    "project_6_problem": "stagnation in social media growth",
+    "project_6_result": "+19K YouTube, +9K Instagram",
+    
+    "project_7_title": "⚙️ R_Apple",
+    "project_7_desc": "Automation and management system for a network of offices focused on staff motivation.",
+    "project_7_problem": "chaos in operations, staff turnover",
+    "project_7_result": "5 offices, stable growth, and team",
+    
+    "project_8_title": "🚘 Car Wash Station",
+    "project_8_desc": "Online booking system and marketing strategy for a car wash.",
+    "project_8_problem": "offline business, no customer flow",
+    "project_8_result": "automated booking + stable traffic",
+    
+    "project_9_title": "🛠 Garage Racer",
+    "project_9_desc": "Accounting and repair system for auto service with inventory and order management.",
+    "project_9_problem": "chaotic handling of repairs and orders",
+    "project_9_result": "unified accounting system + productivity growth",
+    
+    "project_10_title": "🕊️ Avikan",
+    "project_10_desc": "Bird tracking platform with interactive migration map and species database.",
+    "project_10_problem": "no data or visualization for rare species",
+    "project_10_result": "11,000 species + sounds and map",
+
+    "project_details": {
+      "4": {
+        "title": "🏨 Hotel Mardan: Booking Website Redesign",
+        "location": "Polyanytsya, Ukraine",
+        "period": "2017",
+        "problem": "The old site lacked credibility. It wasn't responsive and had no integration with booking services. The owner was losing clients, with all bookings coming through phone calls.",
+        "solution": "Audit of the current site → identified 12 UX issues\nDeveloped 3 design concepts in Figma\nBuilt a site from scratch using HTML, CSS, JS\nIntegration with Booking.com API\nSet up analytics (GA) and event tracking\nOptimized speed and SEO",
+        "results": "+45% online bookings in 2 months\nImproved Google rankings for key search terms\nIncreased customer trust (30% growth in reviews)\nOwner transitioned to full online processing",
+        "role": "Fullstack Developer + UI/UX Designer",
+        "technologies": "HTML • CSS • JS • Figma • Booking.com API • Google Analytics"
+      },
+      "5": {
+        "title": "🏠 Engel & Völkers: Digital Navigation System",
+        "location": "Potsdam, Germany",
+        "period": "2023–2025",
+        "problem": "Marketing team was spending hours coordinating tasks, documents were stored in dozens of different sources, and there was a lack of synchronization between departments.",
+        "solution": "Internal communications audit\nBuilding a coordination system: \"Digital Navigation\"\nCreating dashboards for tracking tasks\nIntegration with Notion and internal CRM\nSetting up access rights and notifications",
+        "results": "Reduced time spent searching for information (by 3x)\nIncreased creative team productivity\nSystem recommended for implementation in other departments",
+        "role": "Digital Systems Developer & Coordinator",
+        "technologies": "Notion • Zapier • Figma • Workflow Design • Internal Docs"
+      },
+      "6": {
+        "title": "🎯 Service_in_Ua: Content Marketing and Social Media Growth",
+        "location": "Kyiv, Ukraine",
+        "period": "2022–2023",
+        "problem": "Insufficient audience growth, ineffective videos, dispersed team without a management system.",
+        "solution": "Content strategy creation (YouTube + Instagram)\nImplementation of CRM + task trackers\nSetting up a production pipeline for videos\nTarget and retargeting optimization\nConducted 10 training sessions for the team",
+        "results": "YouTube growth: from 800 → 20,000 subscribers\nInstagram growth: from 950 → 10,000 followers\nTeam became self-managing\nBrand recognition in new markets",
+        "role": "Digital Marketing Manager",
+        "technologies": "YouTube Studio • Notion • Adobe Premiere • Meta Ads"
+      },
+      "7": {
+        "title": "⚙️ R_Apple: Business Automation and Growth in 5 Cities",
+        "location": "Kyiv, Ukraine",
+        "period": "2016–2022",
+        "problem": "Business was growing rapidly, but management and motivation systems were missing. Processes depended on people.",
+        "solution": "CRM system implementation and sales scripts\nKPI development and transparent motivation system\nAccounting, logistics, and control automation\nScaling to 5 cities",
+        "results": "+250% team productivity\nTransparent control and fewer human errors\nEstablished corporate culture",
+        "role": "CEO, Business System Architect",
+        "technologies": "AmoCRM • Google Sheets Automation • HR Framework"
+      },
+      "8": {
+        "title": "🚘 Car Wash Station: Online Booking and Automation",
+        "location": "Dnipro, Ukraine",
+        "period": "2020",
+        "problem": "Car wash services were offered offline only. There was no website, booking system, or digital promotion.",
+        "solution": "Development of a one-page site with services and booking form\nTelegram notifications and email integration\nDesign and coding from scratch (HTML/CSS/JS)\nDomain and hosting setup",
+        "results": "+30% new clients in the 1st month\n0 → 100% online presence\nIncreased loyalty of regular customers",
+        "role": "Full Stack Developer, UI/UX Designer",
+        "technologies": "HTML • CSS • JavaScript • PHP • Figma • Telegram API • Hosting"
+      },
+      "9": {
+        "title": "🛠 Garage Racer: Accounting and CRM System for Auto Service",
+        "location": "Kyiv, Ukraine",
+        "period": "2018",
+        "problem": "Inefficient tracking of orders, parts, and clients. Work was done in Excel and on paper → frequent errors and losses.",
+        "solution": "Development of internal web application (CMS + inventory)\nTracking of vehicles, repair stages, order integration\nUser roles: mechanics, managers, admin\nReport generation, reminders, and analytics",
+        "results": "–40% errors in orders\n25% faster processes\nTransition from Excel to a system with transparent control",
+        "role": "Full Stack Developer, System Integrator",
+        "technologies": "PHP • JavaScript • MySQL • Bootstrap • UI Design"
+      },
+      "10": {
+        "title": "🕊️ Avikan: Bird Tracking Application",
+        "location": "Berlin, Germany",
+        "period": "2023 · Le Wagon Project",
+        "problem": "Lack of accessible birdwatching tool with photos, audio, and classification.",
+        "solution": "Full SPA on React\nAPI integration with data on 11,000 birds\nFilters by species, region, sounds\nBackend on Ruby on Rails + PostgreSQL\nMobile adaptation",
+        "results": "Created MVP in 2 weeks\nReceived high marks on demo day\nUsed by the birdwatching community",
+        "role": "Frontend Developer, API Integrator",
+        "technologies": "React • Ruby on Rails • PostgreSQL • Tailwind • Figma • External API"
+      }
+    }
   },
   "contact": {
     "contact_me": "Contact me",
@@ -66,9 +188,23 @@
   "common": {
     "back_to_projects": "Back to projects 👈",
     "not_found": "Project not found",
-    "go_to_project": "Go to project",
+    "go_to_project": "Project details",
     "watch_projects": "View projects",
-    "and_version_control": "and version control"
+    "and_version_control": "and version control",
+    "skills": "Skills",
+    "problem": "Problem",
+    "result": "Result",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
+    "location": "Location",
+    "period": "Period",
+    "solution": "Solution",
+    "results": "Results",
+    "role": "Role",
+    "technologies": "Technologies",
+    "next_project": "Next project",
+    "back_to_all_projects": "Back to projects 👈"
   },
   "timeline": {
     "year_2025_title": "Career development",
