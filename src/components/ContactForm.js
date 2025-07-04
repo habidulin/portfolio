@@ -49,42 +49,49 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="p-2">
+    <div className="p-4 max-w-2xl mx-auto">
       <h2 className="text-2xl font-bold mb-4">{t("contact.contact_me")}</h2>
-      <form ref={formRef} onSubmit={handleSubmit}>
-        {error && <p className="text-red-500 mb-4">{error}</p>}
-        {success && <p className="text-green-500 mb-4">{success}</p>}
-        <input
-          type="text"
-          name="from_name"  // Важно для EmailJS
-          placeholder={t("contact.contact_name_placeholder")}
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="border p-2 mb-4 w-full rounded"
-        />
-        <input
-          type="email"
-          name="from_email"  // Важно для EmailJS
-          placeholder={t("contact.contact_email_placeholder")}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="border p-2 mb-4 w-full rounded"
-        />
-        <textarea
-          name="message"  // Важно для EmailJS
-          placeholder={t("contact.contact_message_placeholder")}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="border p-2 mb-4 w-full rounded min-h-[120px]"
-        ></textarea>
-        <button 
-          type="submit" 
-          className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded transition-colors duration-200"
-          disabled={loading}
-        >
-          {loading ? t("contact.contact_sending") : t("contact.contact_send")}
-        </button>
-      </form>
+      <div className="border-2 bg-white p-5 mb-6"
+        style={{
+          borderColor: 'gold',
+          boxShadow: '5px 7px 0 0 black',
+          transition: 'all 0.5s ease'
+        }}>
+        <form ref={formRef} onSubmit={handleSubmit}>
+          {error && <p className="text-red-500 mb-4">{error}</p>}
+          {success && <p className="text-green-500 mb-4">{success}</p>}
+          <input
+            type="text"
+            name="from_name"
+            placeholder={t("contact.contact_name_placeholder")}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="border p-2 mb-4 w-full rounded"
+          />
+          <input
+            type="email"
+            name="from_email"
+            placeholder={t("contact.contact_email_placeholder")}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="border p-2 mb-4 w-full rounded"
+          />
+          <textarea
+            name="message"
+            placeholder={t("contact.contact_message_placeholder")}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="border p-2 mb-4 w-full rounded min-h-[120px]"
+          ></textarea>
+          <button 
+            type="submit" 
+            className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded transition-colors duration-200"
+            disabled={loading}
+          >
+            {loading ? t("contact.contact_sending") : t("contact.contact_send")}
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
