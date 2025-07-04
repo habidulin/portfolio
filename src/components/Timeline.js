@@ -46,7 +46,7 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen py-8 overflow-y-auto" ref={timelineRef}>
+    <div className="relative min-h-screen max-w-2xl mx-auto py-8 overflow-y-auto" ref={timelineRef}>
       {/* Вертикальная линия */}
       <div className="absolute left-8 top-0 bottom-0 border-l-2 border-black" 
            style={{ borderDasharray: "6 8" }}></div>
