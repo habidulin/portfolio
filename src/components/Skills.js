@@ -71,15 +71,25 @@ const SkillsAccordion = () => {
 
   return (
     <div className="p-2">
-      <h1 className="text-2xl font-bold mb-4">{t("menu.skills")}</h1>
+      {/* Стилизованный заголовок с золотой линией */}
+      <h1 className="text-2xl font-bold mb-6 pb-2">
+        {t("menu.skills")}
+      </h1>
+      
       <div className="space-y-4">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="border border-gray-300 rounded-lg shadow-md"
+            className="border-2 rounded-lg bg-white"
+            style={{
+              borderColor: 'gold',
+              boxShadow: '5px 7px 0 0 black',
+              transition: 'all 0.5s ease',
+              marginBottom: '1.5rem'
+            }}
           >
             <button
-              className="w-full text-left p-2 md:p-2 text-lg font-bold flex justify-between items-center"
+              className="w-full text-left p-3 text-lg font-bold flex justify-between items-center"
               onClick={() => toggleAccordion(index)}
             >
               <span className="flex-1">{skill.title}</span>
@@ -95,12 +105,19 @@ const SkillsAccordion = () => {
               </span>
             </button>
             {activeIndex === index && (
-              <ul className="list-disc list-inside p-2 md:p-2 text-gray-700 space-y-2">
+              <ul className="list-disc list-inside p-4 text-gray-700 space-y-2">
                 {skill.details.map((detail, i) => (
                   <li key={i}>{detail}</li>
                 ))}
-                <li>
-                  <Link to="/projects" className="text-blue-500 underline">
+                <li className="mt-3">
+                  <Link 
+                    to="/projects" 
+                    className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                    style={{
+                      boxShadow: '3px 5px 0 0 gold',
+                      transition: 'all 0.3s ease'
+                    }}
+                  >
                     👉 {t("common.watch_projects")}
                   </Link>
                 </li>

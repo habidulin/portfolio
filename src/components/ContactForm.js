@@ -101,7 +101,11 @@ const ContactForm = () => {
           ></textarea>
           <button 
             type="submit" 
-            className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded transition-colors duration-200"
+            className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm"
+              style={{
+                boxShadow: '3px 5px 0 0 gold',
+                transition: 'all 0.3s ease'
+              }}
             disabled={loading}
           >
             {loading ? t("contact.contact_sending") : t("contact.contact_send")}

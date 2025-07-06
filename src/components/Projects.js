@@ -113,15 +113,25 @@ const Projects = () => {
 
   return (
     <div className="p-2">
-      <h2 className="text-2xl font-bold mb-4">{t("menu.projects")}</h2>
+      {/* Стилизованный заголовок с золотой линией */}
+      <h2 className="text-2xl font-bold mb-6 pb-2">
+        {t("menu.projects")}
+      </h2>
+      
       <div className="space-y-4">
         {projects.map((project, index) => (
           <div
             key={project.id}
-            className="border border-gray-300 rounded-lg shadow-md"
+            className="border-2 rounded-lg bg-white"
+            style={{
+              borderColor: 'gold',
+              boxShadow: '5px 7px 0 0 black',
+              transition: 'all 0.5s ease',
+              marginBottom: '1.5rem'
+            }}
           >
             <button
-              className="w-full text-left p-2 md:p-2 text-lg font-bold flex justify-between items-center"
+              className="w-full text-left p-3 text-lg font-bold flex justify-between items-center"
               onClick={() => toggleAccordion(index)}
             >
               <span className="flex-1">{t(`projects.project_${project.id}_title`)}</span>
@@ -137,25 +147,34 @@ const Projects = () => {
               </span>
             </button>
             {activeIndex === index && (
-              <div className="p-2 md:p-2 text-gray-700 space-y-2">
+              <div className="p-3 text-gray-700 space-y-3">
                 {project.images && (
                   <div className="grid grid-cols-3 grid-rows-2 gap-2 items-center">
                     <img
                       src={project.images[0].src}
                       alt={project.images[0].alt}
-                      className="row-span-2 col-span-2 w-full h-40 object-cover rounded-xl shadow-lg cursor-pointer"
+                      className="row-span-2 col-span-2 w-full h-40 object-cover rounded-lg shadow-lg cursor-pointer"
+                      style={{
+                        border: '2px solid gold',
+                      }}
                       onClick={() => openModal(project.images, 0)}
                     />
                     <img
                       src={project.images[1].src}
                       alt={project.images[1].alt}
-                      className="w-full h-20 object-cover rounded-xl shadow cursor-pointer"
+                      className="w-full h-20 object-cover rounded-lg shadow cursor-pointer"
+                      style={{
+                        border: '2px solid gold',
+                      }}
                       onClick={() => openModal(project.images, 1)}
                     />
                     <img
                       src={project.images[2].src}
                       alt={project.images[2].alt}
-                      className="w-full h-20 object-cover rounded-xl shadow cursor-pointer"
+                      className="w-full h-20 object-cover rounded-lg shadow cursor-pointer"
+                      style={{
+                        border: '2px solid gold',
+                      }}
                       onClick={() => openModal(project.images, 2)}
                     />
                   </div>
@@ -169,7 +188,11 @@ const Projects = () => {
                     <div className="text-sm font-semibold">🛠️ {t("common.skills")}:</div>
                     <div className="flex flex-wrap gap-2 mt-1">
                       {project.skills.map((skill, idx) => (
-                        <span key={idx} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                        <span 
+                          key={idx} 
+                          className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded border"
+                          style={{ borderColor: 'gold' }}
+                        >
                           {skill}
                         </span>
                       ))}
@@ -195,7 +218,11 @@ const Projects = () => {
                 
                 <Link
                   to={`/projects/${project.id}`}
-                  className="text-blue-500 underline block mt-4"
+                  className="inline-block mt-2 text-sm bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded"
+                  style={{
+                    boxShadow: '3px 5px 0 0 gold',
+                    transition: 'all 0.3s ease'
+                  }}
                 >
                   👉 {t("common.go_to_project")}
                 </Link>
@@ -213,7 +240,12 @@ const Projects = () => {
         >
           {/* Крестик закрытия */}
           <button
-            className="absolute top-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-2xl rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-gray-300 transition"
+            className="absolute top-4 right-4 bg-white text-black text-2xl rounded-full w-12 h-12 flex items-center justify-center border-2"
+            style={{
+              borderColor: 'gold',
+              boxShadow: '3px 5px 0 0 black',
+              transition: 'all 0.3s ease'
+            }}
             onClick={closeModal}
             aria-label={t("common.close")}
           >
@@ -221,7 +253,12 @@ const Projects = () => {
           </button>
           {/* Стрелка влево */}
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-3xl rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-gray-300 transition"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-black text-3xl rounded-full w-12 h-12 flex items-center justify-center border-2"
+            style={{
+              borderColor: 'gold',
+              boxShadow: '3px 5px 0 0 black',
+              transition: 'all 0.3s ease'
+            }}
             onClick={prevImage}
             aria-label={t("common.previous")}
           >
@@ -230,12 +267,21 @@ const Projects = () => {
           <img
             src={modalImages[current]?.src}
             alt={modalImages[current]?.alt}
-            className="max-h-[80vh] max-w-[90vw] rounded-xl shadow-lg"
+            className="max-h-[80vh] max-w-[90vw] rounded-lg shadow-lg"
+            style={{
+              border: '3px solid gold',
+              boxShadow: '5px 7px 0 0 black'
+            }}
             onClick={(e) => e.stopPropagation()}
           />
           {/* Стрелка вправо */}
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-black text-3xl rounded-full w-12 h-12 flex items-center justify-center shadow-lg border-2 border-gray-300 transition"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-black text-3xl rounded-full w-12 h-12 flex items-center justify-center border-2"
+            style={{
+              borderColor: 'gold',
+              boxShadow: '3px 5px 0 0 black',
+              transition: 'all 0.3s ease'
+            }}
             onClick={nextImage}
             aria-label={t("common.next")}
           >

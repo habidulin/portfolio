@@ -16,7 +16,9 @@
     "about_me_intro": "Hallo! Ich heiße Maksym und bin Entwickler mit Erfahrung in der Erstellung moderner Webanwendungen. Ich spezialisiere mich auf React, Tailwind CSS und andere moderne Technologien.",
     "about_me_portfolio": "In diesem Portfolio finden Sie meine Projekte, Fähigkeiten und Kontaktinformationen. Danke, dass Sie meine Seite besucht haben!",
     "about_skills_title": "Meine Fähigkeiten und mehr",
-    "about_me_thanks": "Das bin ich! Danke, dass Sie meine Seite besucht haben."
+    "about_me_thanks": "Das bin ich! Danke, dass Sie meine Seite besucht haben.",
+    "career_timeline": "Beruflicher Werdegang",
+    "career_summary": "Hier ist eine Übersicht über meinen beruflichen Werdegang und wichtige Meilensteine:"
   },
   "skills": {
     "skill_frontend_title": "🧑‍💻 Frontend & Backend Entwickler",
@@ -178,7 +180,6 @@
       }
     }
   },
-
   "contact": {
     "contact_me": "Kontakt aufnehmen",
     "contact_name_placeholder": "Name",
@@ -190,6 +191,7 @@
     "back_to_projects": "Zurück zu den Projekten 👈",
     "not_found": "Projekt nicht gefunden",
     "watch_projects": "Projekte ansehen",
+    "view_all_skills": "Alle Fähigkeiten ansehen 👉",
     "and_version_control": "und Versionskontrolle",
     "go_to_project": "Projektdetails",
     "skills": "Fähigkeiten",
